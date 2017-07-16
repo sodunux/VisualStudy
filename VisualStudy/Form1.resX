@@ -117,7 +117,318 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="P14443_Text1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="P14443_Text1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="P14443_Text1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 219</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="P14443_Text1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="P14443_Text1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;P14443_Text1.Name" xml:space="preserve">
+    <value>P14443_Text1</value>
+  </data>
+  <data name="&gt;&gt;P14443_Text1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P14443_Text1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;P14443_Text1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="shapeContainer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="shapeContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0, 75, 23</value>
+  </metadata>
+  <metadata name="lineShape2.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>75, 23</value>
+  </metadata>
+  <data name="lineShape2.X1" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lineShape2.X2" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="lineShape2.Y1" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lineShape2.Y2" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="shapeContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 219</value>
+  </data>
+  <data name="shapeContainer2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.Name" xml:space="preserve">
+    <value>shapeContainer2</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.Type" xml:space="preserve">
+    <value>Microsoft.VisualBasic.PowerPacks.ShapeContainer, Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;shapeContainer2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="P14443_Cbox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="P14443_Cbox1.Items" xml:space="preserve">
+    <value>ATR</value>
+  </data>
+  <data name="P14443_Cbox1.Items1" xml:space="preserve">
+    <value>CRC</value>
+  </data>
+  <data name="P14443_Cbox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 199</value>
+  </data>
+  <data name="P14443_Cbox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="P14443_Cbox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="P14443_Cbox1.Text" xml:space="preserve">
+    <value>请选择计算项目</value>
+  </data>
+  <data name="&gt;&gt;P14443_Cbox1.Name" xml:space="preserve">
+    <value>P14443_Cbox1</value>
+  </data>
+  <data name="&gt;&gt;P14443_Cbox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P14443_Cbox1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;P14443_Cbox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="P14443_Lab1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="P14443_Lab1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P14443_Lab1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="P14443_Lab1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 219</value>
+  </data>
+  <data name="P14443_Lab1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;P14443_Lab1.Name" xml:space="preserve">
+    <value>P14443_Lab1</value>
+  </data>
+  <data name="&gt;&gt;P14443_Lab1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P14443_Lab1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;P14443_Lab1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>555, 219</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>295</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>Pg14443</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="P14443_Btn1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="P14443_Btn1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="P14443_Btn1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P14443_Btn1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 222</value>
+  </data>
+  <data name="P14443_Btn1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 60</value>
+  </data>
+  <data name="P14443_Btn1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>555, 63</value>
+  </data>
+  <data name="P14443_Btn1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="P14443_Btn1.Text" xml:space="preserve">
+    <value>计算</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.Name" xml:space="preserve">
+    <value>P14443_Btn1</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.Parent" xml:space="preserve">
+    <value>Pg14443</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Pg14443.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="Pg14443.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="Pg14443.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 288</value>
+  </data>
+  <data name="Pg14443.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Pg14443.Text" xml:space="preserve">
+    <value>144443</value>
+  </data>
+  <data name="&gt;&gt;Pg14443.Name" xml:space="preserve">
+    <value>Pg14443</value>
+  </data>
+  <data name="&gt;&gt;Pg14443.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pg14443.Parent" xml:space="preserve">
+    <value>Pg7816</value>
+  </data>
+  <data name="&gt;&gt;Pg14443.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>518, 347</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>7816</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>Pg7816</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Pg7816.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pg7816.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Pg7816.Size" type="System.Drawing.Size, System.Drawing">
+    <value>569, 314</value>
+  </data>
+  <data name="Pg7816.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Pg7816.Name" xml:space="preserve">
+    <value>Pg7816</value>
+  </data>
+  <data name="&gt;&gt;Pg7816.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pg7816.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Pg7816.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>569, 314</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEASEgAAAAAIACIVAAAFgAAACgAAABIAAAAkAAAAAEAIAAAAAAAAFEAAAAAAAAAAAAAAAAAAAAA
@@ -483,5 +794,26 @@
         AAD///4AAAA///8AAAD///8AAAD///8AAAD///+D4AD///8AAAD//////gD///8AAAD//////wD///8A
         AAA=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>VisualStudy</value>
+  </data>
+  <data name="&gt;&gt;lineShape2.Name" xml:space="preserve">
+    <value>lineShape2</value>
+  </data>
+  <data name="&gt;&gt;lineShape2.Type" xml:space="preserve">
+    <value>Microsoft.VisualBasic.PowerPacks.LineShape, Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
