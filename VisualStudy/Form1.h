@@ -123,14 +123,14 @@ namespace VisualStudy {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
 			this->P14443_Text1 = (gcnew System::Windows::Forms::RichTextBox());
+			this->shapeContainer2 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
+			this->lineShape2 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->P14443_Cbox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
 			this->Pg7816 = (gcnew System::Windows::Forms::TabControl());
 			this->Pg14443 = (gcnew System::Windows::Forms::TabPage());
 			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
-			this->shapeContainer2 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
-			this->lineShape2 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
-			this->P14443_Cbox1 = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
@@ -160,6 +160,32 @@ namespace VisualStudy {
 			resources->ApplyResources(this->P14443_Text1, L"P14443_Text1");
 			this->P14443_Text1->Name = L"P14443_Text1";
 			// 
+			// shapeContainer2
+			// 
+			resources->ApplyResources(this->shapeContainer2, L"shapeContainer2");
+			this->shapeContainer2->Name = L"shapeContainer2";
+			this->shapeContainer2->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(1) {this->lineShape2});
+			this->shapeContainer2->TabStop = false;
+			// 
+			// lineShape2
+			// 
+			this->lineShape2->Name = L"lineShape2";
+			resources->ApplyResources(this->lineShape2, L"lineShape2");
+			// 
+			// P14443_Cbox1
+			// 
+			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
+			this->P14443_Cbox1->FormattingEnabled = true;
+			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) {resources->GetString(L"P14443_Cbox1.Items"), 
+				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2")});
+			this->P14443_Cbox1->Name = L"P14443_Cbox1";
+			this->P14443_Cbox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::P14443_Cbox1_SelectedIndexChanged);
+			// 
+			// P14443_Lab1
+			// 
+			resources->ApplyResources(this->P14443_Lab1, L"P14443_Lab1");
+			this->P14443_Lab1->Name = L"P14443_Lab1";
+			// 
 			// Pg7816
 			// 
 			this->Pg7816->Controls->Add(this->Pg14443);
@@ -182,37 +208,13 @@ namespace VisualStudy {
 			resources->ApplyResources(this->P14443_Btn1, L"P14443_Btn1");
 			this->P14443_Btn1->Name = L"P14443_Btn1";
 			this->P14443_Btn1->UseVisualStyleBackColor = true;
+			this->P14443_Btn1->Click += gcnew System::EventHandler(this, &Form1::P14443_Btn1_Click);
 			// 
 			// tabPage2
 			// 
 			resources->ApplyResources(this->tabPage2, L"tabPage2");
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
-			// 
-			// P14443_Lab1
-			// 
-			resources->ApplyResources(this->P14443_Lab1, L"P14443_Lab1");
-			this->P14443_Lab1->Name = L"P14443_Lab1";
-			// 
-			// shapeContainer2
-			// 
-			resources->ApplyResources(this->shapeContainer2, L"shapeContainer2");
-			this->shapeContainer2->Name = L"shapeContainer2";
-			this->shapeContainer2->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(1) {this->lineShape2});
-			this->shapeContainer2->TabStop = false;
-			// 
-			// lineShape2
-			// 
-			this->lineShape2->Name = L"lineShape2";
-			resources->ApplyResources(this->lineShape2, L"lineShape2");
-			// 
-			// P14443_Cbox1
-			// 
-			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
-			this->P14443_Cbox1->FormattingEnabled = true;
-			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) {resources->GetString(L"P14443_Cbox1.Items"), 
-				resources->GetString(L"P14443_Cbox1.Items1")});
-			this->P14443_Cbox1->Name = L"P14443_Cbox1";
 			// 
 			// Form1
 			// 
@@ -236,6 +238,10 @@ namespace VisualStudy {
 #pragma endregion
 
 
+private: void P14443_Print(String ^tmpstr)
+		 {
+			P14443_Lab1->Text=tmpstr;
+		 }
 
 private: System::Void Pg14443_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
@@ -249,6 +255,31 @@ private: System::Void label1_Click_2(System::Object^  sender, System::EventArgs^
 		 }
 private: System::Void splitContainer1_Panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }
+private: System::Void P14443_Btn1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^tmpstr;
+			 switch(P14443_Cbox1->SelectedIndex)
+			 {
+			 case 0://ATQA
+				 tmpstr=P14443_Text1->Text;
+				 P14443_Print(tmpstr->Length.ToString());
+				 break;
+			 case 1://ATS
+				 P14443_Lab1->Text="1";
+
+				 break;
+			 case 2://SAK
+				 break;
+			 default:
+				 P14443_Lab1->Text="default";
+				 break;
+
+			 }
+
+			 
+		 }
+private: System::Void P14443_Cbox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+		 }
 };
 }
+
 

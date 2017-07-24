@@ -214,10 +214,13 @@
     <value>Bottom</value>
   </data>
   <data name="P14443_Cbox1.Items" xml:space="preserve">
-    <value>ATR</value>
+    <value>ATQA</value>
   </data>
   <data name="P14443_Cbox1.Items1" xml:space="preserve">
-    <value>CRC</value>
+    <value>ATS</value>
+  </data>
+  <data name="P14443_Cbox1.Items2" xml:space="preserve">
+    <value>SAK</value>
   </data>
   <data name="P14443_Cbox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 199</value>
@@ -373,7 +376,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>518, 347</value>
+    <value>561, 288</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -794,9 +797,6 @@
         AAD///4AAAA///8AAAD///8AAAD///8AAAD///+D4AD///8AAAD//////gD///8AAAD//////wD///8A
         AAA=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
