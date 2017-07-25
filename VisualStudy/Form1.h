@@ -1,5 +1,6 @@
 #pragma once
 #include <tchar.h>
+#include "Cal.h"
 namespace VisualStudy {
 
 	using namespace System;
@@ -15,6 +16,7 @@ namespace VisualStudy {
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
+		
 		Form1(void)
 		{
 			InitializeComponent();
@@ -159,6 +161,7 @@ namespace VisualStudy {
 			// 
 			resources->ApplyResources(this->P14443_Text1, L"P14443_Text1");
 			this->P14443_Text1->Name = L"P14443_Text1";
+			this->P14443_Text1->TextChanged += gcnew System::EventHandler(this, &Form1::P14443_Text1_TextChanged);
 			// 
 			// shapeContainer2
 			// 
@@ -236,12 +239,11 @@ namespace VisualStudy {
 
 		}
 #pragma endregion
-
-
-private: void P14443_Print(String ^tmpstr)
+private: void P14443_Print(String ^ tmpstr)
 		 {
-			P14443_Lab1->Text=tmpstr;
+			 P14443_Lab1->Text=tmpstr;
 		 }
+
 
 private: System::Void Pg14443_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
@@ -257,20 +259,21 @@ private: System::Void splitContainer1_Panel1_Paint(System::Object^  sender, Syst
 		 }
 private: System::Void P14443_Btn1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 String ^tmpstr;
+			 Cal caltemp;
+			 tmpstr=P14443_Text1->Text;
 			 switch(P14443_Cbox1->SelectedIndex)
 			 {
 			 case 0://ATQA
-				 tmpstr=P14443_Text1->Text;
-				 P14443_Print(tmpstr->Length.ToString());
+				 P14443_Lab1->Text=caltemp.Pras_ATQA(tmpstr);
 				 break;
 			 case 1://ATS
-				 P14443_Lab1->Text="1";
-
+				 P14443_Lab1->Text=caltemp.Pras_ATS(tmpstr);
 				 break;
 			 case 2://SAK
+				 P14443_Lab1->Text=caltemp.Pras_SAK(tmpstr);
 				 break;
 			 default:
-				 P14443_Lab1->Text="default";
+				 P14443_Lab1->Text="Do Nothing";
 				 break;
 
 			 }
@@ -278,6 +281,10 @@ private: System::Void P14443_Btn1_Click(System::Object^  sender, System::EventAr
 			 
 		 }
 private: System::Void P14443_Cbox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void P14443_Text1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+		 String ^tmpstr;
+		 P14443_Lab1->Text=P14443_Text1->Text->Length.ToString();
 		 }
 };
 }
