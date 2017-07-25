@@ -53,54 +53,7 @@ namespace VisualStudy {
 	private: Microsoft::VisualBasic::PowerPacks::LineShape^  lineShape2;
 	private: System::Windows::Forms::ComboBox^  P14443_Cbox1;
 	private: System::Windows::Forms::Label^  P14443_Lab1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::ComponentModel::IContainer^  components;
-
-
-
-
-
-
-
-
 	protected: 
 
 	protected: 
@@ -123,14 +76,14 @@ namespace VisualStudy {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
 			this->P14443_Text1 = (gcnew System::Windows::Forms::RichTextBox());
+			this->shapeContainer2 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
+			this->lineShape2 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->P14443_Cbox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
 			this->Pg7816 = (gcnew System::Windows::Forms::TabControl());
 			this->Pg14443 = (gcnew System::Windows::Forms::TabPage());
 			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
-			this->shapeContainer2 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
-			this->lineShape2 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
-			this->P14443_Cbox1 = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
@@ -160,6 +113,31 @@ namespace VisualStudy {
 			resources->ApplyResources(this->P14443_Text1, L"P14443_Text1");
 			this->P14443_Text1->Name = L"P14443_Text1";
 			// 
+			// shapeContainer2
+			// 
+			resources->ApplyResources(this->shapeContainer2, L"shapeContainer2");
+			this->shapeContainer2->Name = L"shapeContainer2";
+			this->shapeContainer2->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(1) {this->lineShape2});
+			this->shapeContainer2->TabStop = false;
+			// 
+			// lineShape2
+			// 
+			this->lineShape2->Name = L"lineShape2";
+			resources->ApplyResources(this->lineShape2, L"lineShape2");
+			// 
+			// P14443_Cbox1
+			// 
+			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
+			this->P14443_Cbox1->FormattingEnabled = true;
+			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) {resources->GetString(L"P14443_Cbox1.Items"), 
+				resources->GetString(L"P14443_Cbox1.Items1")});
+			this->P14443_Cbox1->Name = L"P14443_Cbox1";
+			// 
+			// P14443_Lab1
+			// 
+			resources->ApplyResources(this->P14443_Lab1, L"P14443_Lab1");
+			this->P14443_Lab1->Name = L"P14443_Lab1";
+			// 
 			// Pg7816
 			// 
 			this->Pg7816->Controls->Add(this->Pg14443);
@@ -188,31 +166,6 @@ namespace VisualStudy {
 			resources->ApplyResources(this->tabPage2, L"tabPage2");
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
-			// 
-			// P14443_Lab1
-			// 
-			resources->ApplyResources(this->P14443_Lab1, L"P14443_Lab1");
-			this->P14443_Lab1->Name = L"P14443_Lab1";
-			// 
-			// shapeContainer2
-			// 
-			resources->ApplyResources(this->shapeContainer2, L"shapeContainer2");
-			this->shapeContainer2->Name = L"shapeContainer2";
-			this->shapeContainer2->Shapes->AddRange(gcnew cli::array< Microsoft::VisualBasic::PowerPacks::Shape^  >(1) {this->lineShape2});
-			this->shapeContainer2->TabStop = false;
-			// 
-			// lineShape2
-			// 
-			this->lineShape2->Name = L"lineShape2";
-			resources->ApplyResources(this->lineShape2, L"lineShape2");
-			// 
-			// P14443_Cbox1
-			// 
-			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
-			this->P14443_Cbox1->FormattingEnabled = true;
-			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) {resources->GetString(L"P14443_Cbox1.Items"), 
-				resources->GetString(L"P14443_Cbox1.Items1")});
-			this->P14443_Cbox1->Name = L"P14443_Cbox1";
 			// 
 			// Form1
 			// 
