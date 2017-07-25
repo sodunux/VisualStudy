@@ -104,8 +104,10 @@ String^ Cal::Pras_SAK(String^ sak)
 String^ Cal::Pras_ATS(String^ ats)
 {
 	String ^temp;
+	String ^ history_str;
 	unsigned char tmpchar[100];
 	unsigned char FSCI[16]={16,24,32,40,48,64,96,128,255,255,255,255,255,255,255,255};
+	unsigned char TA1,TB1,TC1;
 	try
 	{
 		tmpchar[0]=Convert::ToByte(ats->Substring(0,2),16);//TL
@@ -128,14 +130,101 @@ String^ Cal::Pras_ATS(String^ ats)
 			else
 				temp+="TA1不存在\n";
 			
-			temp+="PICC能接受帧的最大长度FSC为"+Convert::ToString(FSCI[tmpchar[1]],10)+"\n";
+			temp+="PICC能接受帧的最大长度FSC为"+Convert::ToString(FSCI[tmpchar[1]&0x0F],10)+"\n";
 			
-			
-			
+			switch(tmpchar[1]&0x70)
+			{
+			case 0x10://TA1存在，TB1和TC1不存在
+				TA1=Convert::ToByte(ats->Substring(4,2),16);
+				history_str=ats->Substring(6,(ats->Length-6));
+				break;
+			case 0x30://TA1存在，TB1存在
+				TA1=Convert::ToByte(ats->Substring(4,2),16);
+				TB1=Convert::ToByte(ats->Substring(6,2),16);
+				history_str=ats->Substring(8,(ats->Length-8));
+				break;
+			case 0x05:
+				TA1=Convert::ToByte(ats->Substring(4,2),16);
+				TC1=Convert::ToByte(ats->Substring(6,2),16);
+				history_str=ats->Substring(8,(ats->Length-8));
+				break;
+			case 0x70:
+				TA1=Convert::ToByte(ats->Substring(4,2),16);
+				TB1=Convert::ToByte(ats->Substring(6,2),16);
+				TC1=Convert::ToByte(ats->Substring(8,2),16);
+				history_str=ats->Substring(10,(ats->Length-10));
+				break;
+			case 0x20:
+				TB1=Convert::ToByte(ats->Substring(4,2),16);
+				history_str=ats->Substring(6,(ats->Length-6));
+				break;
+			case 0x60:
+				TB1=Convert::ToByte(ats->Substring(4,2),16);
+				TC1=Convert::ToByte(ats->Substring(6,2),16);
+				history_str=ats->Substring(8,(ats->Length-8));
+				break;
+			case 0x40:
+				TC1=Convert::ToByte(ats->Substring(4,2),16);
+				history_str=ats->Substring(6,(ats->Length-6));
+				break;
+			case 0x00:
+				history_str=ats->Substring(4,(ats->Length-4));
+				break;
+			default:
+				break;
+			}
 			if(tmpchar[1]&0x10)
 			{
-				tmpchar[2]=Convert::ToByte(ats->Substring(2,2),16);//TA1
+				if(TA1&0x80)
+					temp+="只支持双向相同速率\n";
+				else 
+					temp+="支持双向不同速率\n";
+				if(TA1&0x40)
+					temp+="picc发送支持848K\n";
+				else
+					temp+="picc发送不支持848K\n";
+				if(TA1&0x20)
+					temp+="picc发送支持424K\n";
+				else
+					temp+="picc发送不支持424K\n";
+				if(TA1&0x10)
+					temp+="picc发送支持212K\n";
+				else
+					temp+="picc发送不支持212K\n";
+				if(TA1&0x04)
+					temp+="pcd发送支持848K\n";
+				else 
+					temp+="pcd发送支持848K\n";
+				if(TA1&0x02)
+					temp+="pcd发送支持424K\n";
+				else 
+					temp+="pcd发送不支持424K\n";
+				if(TA1&0x01)
+					temp+="pcd发送支持212K\n";
+				else 
+					temp+="pcd发送不支持212K\n";
 			}
+
+			if(tmpchar[1]&0x20)
+			{
+				temp+="FWI是"+Convert::ToString(TB1&0xF0,10)+"\n";
+				temp+="SFGI是"+Convert::ToString(TB1&0x0F,10)+"\n";
+
+			}
+			if(tmpchar[1]&0x40)
+			{
+				if(TC1&0x01)
+					temp+="支持NAD\n";
+				else 
+					temp+="不支持NAD\n";
+				if(TC1&0x02)
+					temp+="支持CID\n";
+				else 
+					temp+="不支持CID\n";
+			}
+
+			temp+="历史字节是"+history_str;
+
 
 
 		}

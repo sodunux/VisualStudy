@@ -148,12 +148,14 @@ namespace VisualStudy {
 			// 
 			// splitContainer1.Panel1
 			// 
+			resources->ApplyResources(this->splitContainer1->Panel1, L"splitContainer1.Panel1");
 			this->splitContainer1->Panel1->Controls->Add(this->P14443_Text1);
 			this->splitContainer1->Panel1->Controls->Add(this->shapeContainer2);
 			this->splitContainer1->Panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Form1::splitContainer1_Panel1_Paint);
 			// 
 			// splitContainer1.Panel2
 			// 
+			resources->ApplyResources(this->splitContainer1->Panel2, L"splitContainer1.Panel2");
 			this->splitContainer1->Panel2->Controls->Add(this->P14443_Cbox1);
 			this->splitContainer1->Panel2->Controls->Add(this->P14443_Lab1);
 			// 
@@ -172,15 +174,15 @@ namespace VisualStudy {
 			// 
 			// lineShape2
 			// 
-			this->lineShape2->Name = L"lineShape2";
 			resources->ApplyResources(this->lineShape2, L"lineShape2");
+			this->lineShape2->Name = L"lineShape2";
 			// 
 			// P14443_Cbox1
 			// 
 			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
 			this->P14443_Cbox1->FormattingEnabled = true;
-			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) {resources->GetString(L"P14443_Cbox1.Items"), 
-				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2")});
+			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) {resources->GetString(L"P14443_Cbox1.Items"), 
+				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2"), resources->GetString(L"P14443_Cbox1.Items3")});
 			this->P14443_Cbox1->Name = L"P14443_Cbox1";
 			this->P14443_Cbox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::P14443_Cbox1_SelectedIndexChanged);
 			// 
@@ -191,17 +193,17 @@ namespace VisualStudy {
 			// 
 			// Pg7816
 			// 
+			resources->ApplyResources(this->Pg7816, L"Pg7816");
 			this->Pg7816->Controls->Add(this->Pg14443);
 			this->Pg7816->Controls->Add(this->tabPage2);
-			resources->ApplyResources(this->Pg7816, L"Pg7816");
 			this->Pg7816->Name = L"Pg7816";
 			this->Pg7816->SelectedIndex = 0;
 			// 
 			// Pg14443
 			// 
+			resources->ApplyResources(this->Pg14443, L"Pg14443");
 			this->Pg14443->Controls->Add(this->splitContainer1);
 			this->Pg14443->Controls->Add(this->P14443_Btn1);
-			resources->ApplyResources(this->Pg14443, L"Pg14443");
 			this->Pg14443->Name = L"Pg14443";
 			this->Pg14443->UseVisualStyleBackColor = true;
 			this->Pg14443->Click += gcnew System::EventHandler(this, &Form1::Pg14443_Click);
@@ -221,9 +223,9 @@ namespace VisualStudy {
 			// 
 			// Form1
 			// 
+			resources->ApplyResources(this, L"$this");
 			this->AllowDrop = true;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
-			resources->ApplyResources(this, L"$this");
 			this->AutoValidate = System::Windows::Forms::AutoValidate::EnableAllowFocusChange;
 			this->Controls->Add(this->Pg7816);
 			this->HelpButton = true;
