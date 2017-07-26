@@ -37,78 +37,19 @@ namespace VisualStudy {
 			}
 		}
 	private: System::Windows::Forms::TabControl^  Pg7816;
-	protected: 
-
-
+	protected:
 	private: System::Windows::Forms::TabPage^  tabPage2;
 	private: System::Windows::Forms::TabPage^  Pg14443;
 	private: System::Windows::Forms::Button^  P14443_Btn1;
-
-
-
 	private: System::Windows::Forms::SplitContainer^  splitContainer1;
 	private: System::Windows::Forms::RichTextBox^  P14443_Text1;
-
-
-
 	private: Microsoft::VisualBasic::PowerPacks::ShapeContainer^  shapeContainer2;
 	private: Microsoft::VisualBasic::PowerPacks::LineShape^  lineShape2;
 	private: System::Windows::Forms::ComboBox^  P14443_Cbox1;
 	private: System::Windows::Forms::Label^  P14443_Lab1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::ComponentModel::IContainer^  components;
-
-
-
-
-
-
-
-
 	protected: 
-
 	protected: 
-
-
-
 	private:
 		/// <summary>
 		/// 必需的设计器变量。
@@ -181,9 +122,9 @@ namespace VisualStudy {
 			// 
 			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
 			this->P14443_Cbox1->FormattingEnabled = true;
-			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) {resources->GetString(L"P14443_Cbox1.Items"), 
+			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) {resources->GetString(L"P14443_Cbox1.Items"), 
 				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2"), resources->GetString(L"P14443_Cbox1.Items3"), 
-				resources->GetString(L"P14443_Cbox1.Items4"), resources->GetString(L"P14443_Cbox1.Items5")});
+				resources->GetString(L"P14443_Cbox1.Items4")});
 			this->P14443_Cbox1->Name = L"P14443_Cbox1";
 			this->P14443_Cbox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::P14443_Cbox1_SelectedIndexChanged);
 			// 
@@ -275,9 +216,14 @@ private: System::Void P14443_Btn1_Click(System::Object^  sender, System::EventAr
 			 case 2://SAK
 				 P14443_Lab1->Text=caltemp.Pras_SAK(tmpstr);
 				 break;
-			 case 3://
-					
+			 case 3://CRC_14443A
+				  P14443_Lab1->Text=caltemp.Pras_CRC14443A(tmpstr);
+				  //P14443_Lab1->Text=(tmpstr);
+				break;
+			 case 4://CRC_14443B
+				  P14443_Lab1->Text=caltemp.Pras_CRC14443B(tmpstr);
 				 break;
+				
 			 default:
 				 P14443_Lab1->Text="Do Nothing";
 				 break;

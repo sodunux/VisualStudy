@@ -19,7 +19,7 @@ String^ Cal::Pras_ATQA(String^ atqa)
 			tmpchar[0]=Convert::ToByte(atqa->Substring(0,2),16);
 			tmpchar[1]=Convert::ToByte(atqa->Substring(2,2),16);
 			temp="ATQA专用编码:"+Convert::ToString(tmpchar[1]&0x0F)+"\n";
-			switch((tmpchar[0]>>6)==0x03)
+			switch((tmpchar[0]>>6))
 			{
 			case 0x00:
 					temp+="UID重数：一重\n";
@@ -245,15 +245,72 @@ String^ Cal::Pras_ATS(String^ ats)
 
 String^ Cal::Pras_CRC14443A(String^ crc14443a)
 {
-	
+	String ^ temp;
+	UInt16 len=1024*10;
+	unsigned char data_in[1024*10];
+	UInt16 crc_result=0,ploy=0x8408,init_value=0x6363;
+	UInt16 i;
+	try
+	{
+		if(crc14443a->Length>(len*2)) throw len;
+		if(crc14443a->Length%2) throw len;
+
+		for(i=0;i<(crc14443a->Length/2);i=i+1)
+		{
+			data_in[i]=Convert::ToByte(crc14443a->Substring((i*2),2),16);
+		}
+		crc_result=Pras_CRC16(ploy,init_value,data_in,(crc14443a->Length/2));
+		temp="CRC = 0x"+Convert::ToString(crc_result,16)+"\n";	
+	}
+	catch(...)
+	{
+		temp="Please enter a correct data(小于10240bytes)!";
+	}
+	return temp;
 }
 
 String^ Cal::Pras_CRC14443B(String^ crc14443b)
 {
-	
+	String ^ temp;
+	UInt16 len=1024*10;
+	unsigned char data_in[1024*10];
+	UInt16 crc_result=0,ploy=0x8408,init_value=0xFFFF;
+	UInt16 i;
+	try
+	{
+		if(crc14443b->Length>(len*2)) throw len;
+		if(crc14443b->Length%2) throw len;
+
+		for(i=0;i<(crc14443b->Length/2);i=i+1)
+		{
+			data_in[i]=Convert::ToByte(crc14443b->Substring((i*2),2),16);
+		}
+		crc_result=Pras_CRC16(ploy,init_value,data_in,(crc14443b->Length/2));
+		temp="CRC = 0x"+Convert::ToString(crc_result,16)+"\n";	
+	}
+	catch(...)
+	{
+		temp="Please enter a correct data(小于10240bytes)!";
+	}
+	return temp;
 }
 
-String^ Cal::Pras_CRCCCITT(String^ crcccitt)
+
+
+UInt16 Cal::Pras_CRC16(UInt16 ploy,UInt16 init_value,unsigned char *data_in,UInt16 len)
 {
-	
+	UInt16 crc_result=init_value;
+	UInt16 i,j;
+	for(i=0;i<len;i++)
+	{
+		crc_result=crc_result^data_in[i];
+		for(j=0;j<8;j++)
+		{
+			if(crc_result&0x0001)
+				crc_result=(crc_result>>1)^ploy;
+			else 
+				crc_result=(crc_result>>1);
+		}
+	}
+	return crc_result;
 }

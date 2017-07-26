@@ -127,12 +127,6 @@
   <data name="P14443_Cbox1.Items3" xml:space="preserve">
     <value>CRC_14443A</value>
   </data>
-  <data name="P14443_Cbox1.Items4" xml:space="preserve">
-    <value>CRC_14443B</value>
-  </data>
-  <data name="P14443_Cbox1.Items5" xml:space="preserve">
-    <value>CRC_CCITT</value>
-  </data>
   <data name="P14443_Cbox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 186</value>
   </data>

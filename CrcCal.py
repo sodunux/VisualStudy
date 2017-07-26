@@ -126,8 +126,9 @@ def ReadDataFromBin(filepath,readlen):
 	return tmpdat
 
 
-crcdat=ReadDataFromBin("384K_FF.bin",2*1024)
-print hex(crc16_14443a(crcdat))
-print hex(crc16_14443b(crcdat))
-print hex(crc16_ccitt(crcdat))
-
+#crcdat=ReadDataFromBin("384K_FF.bin",2*1024)
+#print hex(crc16_14443a(crcdat))
+#print hex(crc16_14443b(crcdat))
+#print hex(crc16_ccitt(crcdat))
+a=[0x02,0x04,0x06]
+print hex(crc16_14443a(a))
