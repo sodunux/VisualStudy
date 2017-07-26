@@ -242,3 +242,18 @@ String^ Cal::Pras_ATS(String^ ats)
 
 	return temp;	
 }
+
+String^ Cal::Pras_CRC14443A(String^ crc14443a)
+{
+	
+}
+
+String^ Cal::Pras_CRC14443B(String^ crc14443b)
+{
+	
+}
+
+String^ Cal::Pras_CRCCCITT(String^ crcccitt)
+{
+	
+}

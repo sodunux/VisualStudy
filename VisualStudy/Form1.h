@@ -181,8 +181,9 @@ namespace VisualStudy {
 			// 
 			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
 			this->P14443_Cbox1->FormattingEnabled = true;
-			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) {resources->GetString(L"P14443_Cbox1.Items"), 
-				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2"), resources->GetString(L"P14443_Cbox1.Items3")});
+			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) {resources->GetString(L"P14443_Cbox1.Items"), 
+				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2"), resources->GetString(L"P14443_Cbox1.Items3"), 
+				resources->GetString(L"P14443_Cbox1.Items4"), resources->GetString(L"P14443_Cbox1.Items5")});
 			this->P14443_Cbox1->Name = L"P14443_Cbox1";
 			this->P14443_Cbox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::P14443_Cbox1_SelectedIndexChanged);
 			// 
@@ -273,6 +274,9 @@ private: System::Void P14443_Btn1_Click(System::Object^  sender, System::EventAr
 				 break;
 			 case 2://SAK
 				 P14443_Lab1->Text=caltemp.Pras_SAK(tmpstr);
+				 break;
+			 case 3://
+					
 				 break;
 			 default:
 				 P14443_Lab1->Text="Do Nothing";
