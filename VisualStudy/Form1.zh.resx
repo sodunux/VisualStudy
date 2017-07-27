@@ -127,6 +127,9 @@
   <data name="P14443_Cbox1.Items3" xml:space="preserve">
     <value>CRC_14443A</value>
   </data>
+  <data name="P14443_Cbox1.Items5" xml:space="preserve">
+    <value>ATR</value>
+  </data>
   <data name="P14443_Cbox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 186</value>
   </data>
@@ -159,8 +162,20 @@
   <data name="Pg14443.Size" type="System.Drawing.Size, System.Drawing">
     <value>562, 272</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Pg14443.Text" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="Port.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="Port.Size" type="System.Drawing.Size, System.Drawing">
     <value>562, 272</value>
+  </data>
+  <data name="Port.Text" xml:space="preserve">
+    <value>接口</value>
+  </data>
+  <data name="Pg7816.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="Pg7816.Size" type="System.Drawing.Size, System.Drawing">
     <value>570, 298</value>

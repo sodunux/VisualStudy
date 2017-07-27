@@ -314,3 +314,155 @@ UInt16 Cal::Pras_CRC16(UInt16 ploy,UInt16 init_value,unsigned char *data_in,UInt
 	}
 	return crc_result;
 }
+
+String^ Cal::Pras_ATR(String^ atr)
+{
+	String ^ temp;
+	unsigned char TS,T0,TA1,TB1,TC1,TD1;
+	String^ history_string;
+	int F[16]={372,372,558,744,1116,1488,2232,0,0,512,768,1024,1536,2048,0,0};
+	int D[16]={0,1,2,4,8,16,32,0,12,20,0,0,0,0,0,0};
+	try
+	{
+		TS=Convert::ToByte(atr->Substring(0,2),16);
+		T0=Convert::ToByte(atr->Substring(2,2),16);
+		if(TS==0x3B)
+			temp="ATR正向约定，首先传送LSB\n";
+		else if(TS==0x3F)
+			temp="ATR反向约定，首先传送MSB\n";
+		else 
+			throw temp;
+
+		if(T0&0x10)
+			temp+="TA1存在\n";
+		else 
+			temp+="TA1不存在\n";
+		if(T0&0x20)
+			temp+="TB1存在\n";
+		else 
+			temp+="TB1不存在\n";
+		if(T0&0x40)
+			temp+="TC1存在\n";
+		else 
+			temp+="TC1不存在\n";
+		if(T0&0x80)
+			temp+="TD1存在\n";
+		else
+			temp+="TD1不存在\n";
+
+		temp+="历史字节数为"+Convert::ToString((T0&0x0F),16)+"\n";	
+		
+		switch(T0>>4)
+		{
+		case 0:
+			break;
+		case 1:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			history_string=atr->Substring(6,(atr->Length-6));
+			break;
+		case 2:
+			TB1=Convert::ToByte(atr->Substring(4,2),16);
+			history_string=atr->Substring(6,(atr->Length-6));
+			break;
+		case 3:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			TB1=Convert::ToByte(atr->Substring(6,2),16);
+			history_string=atr->Substring(8,(atr->Length-8));
+			break;
+		case 4:
+			TC1=Convert::ToByte(atr->Substring(4,2),16);
+			history_string=atr->Substring(6,(atr->Length-6));
+			break;
+		case 5:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			TC1=Convert::ToByte(atr->Substring(6,2),16);
+			history_string=atr->Substring(8,(atr->Length-8));
+			break;
+		case 6:
+			TB1=Convert::ToByte(atr->Substring(4,2),16);
+			TC1=Convert::ToByte(atr->Substring(6,2),16);
+			history_string=atr->Substring(8,(atr->Length-8));
+			break;
+		case 7:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			TB1=Convert::ToByte(atr->Substring(6,2),16);
+			TC1=Convert::ToByte(atr->Substring(8,2),16);
+			history_string=atr->Substring(10,(atr->Length-10));
+			break;
+		case 8:
+			TD1=Convert::ToByte(atr->Substring(4,2),16);
+			history_string=atr->Substring(6,(atr->Length-6));
+			break;
+		case 9:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			TD1=Convert::ToByte(atr->Substring(6,2),16);
+			history_string=atr->Substring(8,(atr->Length-8));
+			break;
+		case 10:
+			TB1=Convert::ToByte(atr->Substring(4,2),16);
+			TD1=Convert::ToByte(atr->Substring(6,2),16);
+			history_string=atr->Substring(8,(atr->Length-8));
+			break;
+		case 11:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			TB1=Convert::ToByte(atr->Substring(6,2),16);
+			TD1=Convert::ToByte(atr->Substring(8,2),16);
+			history_string=atr->Substring(10,(atr->Length-10));
+			break;
+		case 12:
+			TC1=Convert::ToByte(atr->Substring(4,2),16);
+			TD1=Convert::ToByte(atr->Substring(6,2),16);
+			history_string=atr->Substring(8,(atr->Length-8));
+			break;
+		case 13:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			TC1=Convert::ToByte(atr->Substring(6,2),16);
+			TD1=Convert::ToByte(atr->Substring(8,2),16);
+			history_string=atr->Substring(10,(atr->Length-10));
+			break;
+		case 14:
+			TB1=Convert::ToByte(atr->Substring(4,2),16);
+			TC1=Convert::ToByte(atr->Substring(6,2),16);
+			TD1=Convert::ToByte(atr->Substring(8,2),16);
+			history_string=atr->Substring(10,(atr->Length-10));
+			break;
+		case 15:
+			TA1=Convert::ToByte(atr->Substring(4,2),16);
+			TB1=Convert::ToByte(atr->Substring(6,2),16);
+			TC1=Convert::ToByte(atr->Substring(8,2),16);
+			TD1=Convert::ToByte(atr->Substring(10,2),16);
+			history_string=atr->Substring(12,(atr->Length-12));
+			break;
+		default:
+			break;
+		}
+	
+		if(T0&0x10)
+		{
+			temp+="F="+Convert::ToString(F[TA1>>4],10)+","+"D="+Convert::ToString(D[TA1&0x0F],10)+"\n";
+		}
+		if(T0&0x20)
+		{
+			temp+="最大编程电流因子I1为"+Convert::ToString(TB1>>5,10)+"\n";
+			temp+="最大编程电压因子V1为"+Convert::ToString(TB1&0x1F,10)+"\n";
+		}
+		if(T0&0x40)
+		{
+			temp+="额外保护时间N为"+Convert::ToString(TC1,10)+"(12+(F/D)*(N/f))\n";
+		}
+		if(T0&0x80)
+		{
+			temp+="后续发送的协议类型T="+Convert::ToString(TD1&0x0F,10)+"\n";
+		}
+		if(history_string->Length)
+			temp+="历史字符："+history_string+"\n";
+
+	}
+
+	catch(...)
+	{
+		temp="Please enter a correct data!";
+	}
+	return temp;
+
+}

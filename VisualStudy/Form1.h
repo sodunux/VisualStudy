@@ -37,8 +37,10 @@ namespace VisualStudy {
 			}
 		}
 	private: System::Windows::Forms::TabControl^  Pg7816;
+	private: System::Windows::Forms::TabPage^  Port;
+
 	protected:
-	private: System::Windows::Forms::TabPage^  tabPage2;
+
 	private: System::Windows::Forms::TabPage^  Pg14443;
 	private: System::Windows::Forms::Button^  P14443_Btn1;
 	private: System::Windows::Forms::SplitContainer^  splitContainer1;
@@ -73,7 +75,7 @@ namespace VisualStudy {
 			this->Pg7816 = (gcnew System::Windows::Forms::TabControl());
 			this->Pg14443 = (gcnew System::Windows::Forms::TabPage());
 			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->Port = (gcnew System::Windows::Forms::TabPage());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
@@ -122,9 +124,9 @@ namespace VisualStudy {
 			// 
 			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
 			this->P14443_Cbox1->FormattingEnabled = true;
-			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) {resources->GetString(L"P14443_Cbox1.Items"), 
+			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) {resources->GetString(L"P14443_Cbox1.Items"), 
 				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2"), resources->GetString(L"P14443_Cbox1.Items3"), 
-				resources->GetString(L"P14443_Cbox1.Items4")});
+				resources->GetString(L"P14443_Cbox1.Items4"), resources->GetString(L"P14443_Cbox1.Items5")});
 			this->P14443_Cbox1->Name = L"P14443_Cbox1";
 			this->P14443_Cbox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::P14443_Cbox1_SelectedIndexChanged);
 			// 
@@ -137,7 +139,7 @@ namespace VisualStudy {
 			// 
 			resources->ApplyResources(this->Pg7816, L"Pg7816");
 			this->Pg7816->Controls->Add(this->Pg14443);
-			this->Pg7816->Controls->Add(this->tabPage2);
+			this->Pg7816->Controls->Add(this->Port);
 			this->Pg7816->Name = L"Pg7816";
 			this->Pg7816->SelectedIndex = 0;
 			// 
@@ -157,11 +159,11 @@ namespace VisualStudy {
 			this->P14443_Btn1->UseVisualStyleBackColor = true;
 			this->P14443_Btn1->Click += gcnew System::EventHandler(this, &Form1::P14443_Btn1_Click);
 			// 
-			// tabPage2
+			// Port
 			// 
-			resources->ApplyResources(this->tabPage2, L"tabPage2");
-			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->UseVisualStyleBackColor = true;
+			resources->ApplyResources(this->Port, L"Port");
+			this->Port->Name = L"Port";
+			this->Port->UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
@@ -223,6 +225,9 @@ private: System::Void P14443_Btn1_Click(System::Object^  sender, System::EventAr
 			 case 4://CRC_14443B
 				  P14443_Lab1->Text=caltemp.Pras_CRC14443B(tmpstr);
 				 break;
+			 case 5:
+				  P14443_Lab1->Text=caltemp.Pras_ATR(tmpstr);
+				 break;
 				
 			 default:
 				 P14443_Lab1->Text="Do Nothing";
@@ -236,7 +241,7 @@ private: System::Void P14443_Cbox1_SelectedIndexChanged(System::Object^  sender,
 		 }
 private: System::Void P14443_Text1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 		 String ^tmpstr;
-		 P14443_Lab1->Text=P14443_Text1->Text->Length.ToString();
+		 P14443_Lab1->Text=((double)(P14443_Text1->Text->Length)/2.0).ToString();
 		 }
 };
 }
