@@ -36,6 +36,9 @@
     <ClCompile Include="Endurance.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="card.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -51,6 +54,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Endurance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="card.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WinSCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -69,5 +78,8 @@
     <EmbeddedResource Include="Form1.sq.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="WinSCard.Lib" />
   </ItemGroup>
 </Project>

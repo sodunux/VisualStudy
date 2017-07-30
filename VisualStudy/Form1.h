@@ -75,8 +75,14 @@ namespace VisualStudy {
 	private: System::Windows::Forms::ComboBox^  Endurance_comboBox4;
 	private: System::Windows::Forms::Button^  endurance_openport;
 	private: System::Windows::Forms::Label^  endurance_label6;
+	private: System::Windows::Forms::TabPage^  FMReader;
 
-	private: System::Windows::Forms::RichTextBox^  TestText;
+
+
+
+
+
+
 
 
 
@@ -112,7 +118,6 @@ namespace VisualStudy {
 			this->Calculate = (gcnew System::Windows::Forms::TabPage());
 			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
 			this->Endurance = (gcnew System::Windows::Forms::TabPage());
-			this->TestText = (gcnew System::Windows::Forms::RichTextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->splitContainer2 = (gcnew System::Windows::Forms::SplitContainer());
 			this->endurance_label6 = (gcnew System::Windows::Forms::Label());
@@ -128,6 +133,7 @@ namespace VisualStudy {
 			this->Endurance_comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->Endurance_comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->serialport = (gcnew System::IO::Ports::SerialPort(this->components));
+			this->FMReader = (gcnew System::Windows::Forms::TabPage());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
@@ -195,6 +201,7 @@ namespace VisualStudy {
 			// 
 			this->tabcontrol->Controls->Add(this->Calculate);
 			this->tabcontrol->Controls->Add(this->Endurance);
+			this->tabcontrol->Controls->Add(this->FMReader);
 			resources->ApplyResources(this->tabcontrol, L"tabcontrol");
 			this->tabcontrol->Name = L"tabcontrol";
 			this->tabcontrol->SelectedIndex = 0;
@@ -217,17 +224,11 @@ namespace VisualStudy {
 			// 
 			// Endurance
 			// 
-			this->Endurance->Controls->Add(this->TestText);
 			this->Endurance->Controls->Add(this->groupBox1);
 			resources->ApplyResources(this->Endurance, L"Endurance");
 			this->Endurance->Name = L"Endurance";
 			this->Endurance->UseVisualStyleBackColor = true;
 			this->Endurance->Click += gcnew System::EventHandler(this, &Form1::Endurance_Click);
-			// 
-			// TestText
-			// 
-			resources->ApplyResources(this->TestText, L"TestText");
-			this->TestText->Name = L"TestText";
 			// 
 			// groupBox1
 			// 
@@ -339,6 +340,12 @@ namespace VisualStudy {
 			// serialport
 			// 
 			this->serialport->Parity = System::IO::Ports::Parity::Odd;
+			// 
+			// FMReader
+			// 
+			resources->ApplyResources(this->FMReader, L"FMReader");
+			this->FMReader->Name = L"FMReader";
+			this->FMReader->UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
@@ -482,6 +489,12 @@ private: System::Void endurance_openport_Click(System::Object^  sender, System::
 
 
 
+		 }
+private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void groupBox2_Enter(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void notifyIcon1_MouseDoubleClick(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 		 }
 };
 }
