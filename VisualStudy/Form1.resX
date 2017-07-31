@@ -834,6 +834,54 @@
   <data name="&gt;&gt;Endurance.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="FMReaderBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 201</value>
+  </data>
+  <data name="FMReaderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="FMReaderBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="FMReaderBtn.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;FMReaderBtn.Name" xml:space="preserve">
+    <value>FMReaderBtn</value>
+  </data>
+  <data name="&gt;&gt;FMReaderBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMReaderBtn.Parent" xml:space="preserve">
+    <value>FMReader</value>
+  </data>
+  <data name="&gt;&gt;FMReaderBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FMReaderShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 64</value>
+  </data>
+  <data name="FMReaderShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 82</value>
+  </data>
+  <data name="FMReaderShow.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="FMReaderShow.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;FMReaderShow.Name" xml:space="preserve">
+    <value>FMReaderShow</value>
+  </data>
+  <data name="&gt;&gt;FMReaderShow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMReaderShow.Parent" xml:space="preserve">
+    <value>FMReader</value>
+  </data>
+  <data name="&gt;&gt;FMReaderShow.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="FMReader.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
   </data>

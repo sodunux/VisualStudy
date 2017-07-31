@@ -5,24 +5,45 @@ using namespace VisualStudy;
 
 card::card(void)
 {
-
+	hContext=NULL;
+	ReaderName=gcnew array<String^>(10);
+	
 }
 
-void card:: cardtest()
+void card::GetReaders()
 {
-	SCARDCONTEXT hContext;
-	LONG rv;
-	LPTSTR mszReaders;
-	DWORD dwReaders;
-	SCARDHANDLE hCard;
-	DWORD dwActiveProtocol;
+	bool ret;
+	TCHAR readerbuff[1024];
+	DWORD dwlen=1024;
+	DWORD i,j;
+	SCARDCONTEXT hSC;
+	LONG lreturn;
+	try
+	{
+		lreturn=SCardEstablishContext(SCARD_SCOPE_SYSTEM,NULL,NULL,&hSC);
+		if(lreturn!=SCARD_S_SUCCESS) throw lreturn;
+		hContext=hSC;
 
-	rv = SCardEstablishContext(SCARD_SCOPE_SYSTEM, NULL, NULL, &hContext);
-	rv = SCardListReaders(hContext, NULL, NULL, &dwReaders);
-	mszReaders = (LPTSTR)malloc(sizeof(char)*dwReaders);
-	rv = SCardListReaders(hContext, NULL, mszReaders, &dwReaders);
-	//rv = SCardConnect(hContext, "Reader X", SCARD_SHARE_SHARED,
-	//	SCARD_PROTOCOL_T0, &hCard, &dwActiveProtocol);
+		lreturn=SCardListReaders(hSC,NULL,(LPTSTR)readerbuff,&dwlen);
+		if(lreturn!=SCARD_S_SUCCESS) throw lreturn;
 
+		for(i=0;i<dwlen;i++)
+		{
+			
+		}
+
+		
+
+
+
+	}
+	catch(...)
+	{
+		;
+	}
 }
+
+
+
+
 

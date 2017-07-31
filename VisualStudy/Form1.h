@@ -1,6 +1,7 @@
 #pragma once
 #include <tchar.h>
 #include "Cal.h"
+#include "card.h"
 namespace VisualStudy {
 
 	using namespace System;
@@ -76,6 +77,8 @@ namespace VisualStudy {
 	private: System::Windows::Forms::Button^  endurance_openport;
 	private: System::Windows::Forms::Label^  endurance_label6;
 	private: System::Windows::Forms::TabPage^  FMReader;
+	private: System::Windows::Forms::Button^  FMReaderBtn;
+	private: System::Windows::Forms::RichTextBox^  FMReaderShow;
 
 
 
@@ -132,8 +135,10 @@ namespace VisualStudy {
 			this->Endurance_comboBox3 = (gcnew System::Windows::Forms::ComboBox());
 			this->Endurance_comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->Endurance_comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->serialport = (gcnew System::IO::Ports::SerialPort(this->components));
 			this->FMReader = (gcnew System::Windows::Forms::TabPage());
+			this->FMReaderBtn = (gcnew System::Windows::Forms::Button());
+			this->FMReaderShow = (gcnew System::Windows::Forms::RichTextBox());
+			this->serialport = (gcnew System::IO::Ports::SerialPort(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
@@ -146,6 +151,7 @@ namespace VisualStudy {
 			this->splitContainer2->Panel1->SuspendLayout();
 			this->splitContainer2->Panel2->SuspendLayout();
 			this->splitContainer2->SuspendLayout();
+			this->FMReader->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// splitContainer1
@@ -337,15 +343,29 @@ namespace VisualStudy {
 			this->Endurance_comboBox1->FormattingEnabled = true;
 			this->Endurance_comboBox1->Name = L"Endurance_comboBox1";
 			// 
-			// serialport
-			// 
-			this->serialport->Parity = System::IO::Ports::Parity::Odd;
-			// 
 			// FMReader
 			// 
+			this->FMReader->Controls->Add(this->FMReaderBtn);
+			this->FMReader->Controls->Add(this->FMReaderShow);
 			resources->ApplyResources(this->FMReader, L"FMReader");
 			this->FMReader->Name = L"FMReader";
 			this->FMReader->UseVisualStyleBackColor = true;
+			// 
+			// FMReaderBtn
+			// 
+			resources->ApplyResources(this->FMReaderBtn, L"FMReaderBtn");
+			this->FMReaderBtn->Name = L"FMReaderBtn";
+			this->FMReaderBtn->UseVisualStyleBackColor = true;
+			this->FMReaderBtn->Click += gcnew System::EventHandler(this, &Form1::FMReaderBtn_Click);
+			// 
+			// FMReaderShow
+			// 
+			resources->ApplyResources(this->FMReaderShow, L"FMReaderShow");
+			this->FMReaderShow->Name = L"FMReaderShow";
+			// 
+			// serialport
+			// 
+			this->serialport->Parity = System::IO::Ports::Parity::Odd;
 			// 
 			// Form1
 			// 
@@ -370,6 +390,7 @@ namespace VisualStudy {
 			this->splitContainer2->Panel2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer2))->EndInit();
 			this->splitContainer2->ResumeLayout(false);
+			this->FMReader->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -495,6 +516,12 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 private: System::Void groupBox2_Enter(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void notifyIcon1_MouseDoubleClick(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+		 }
+private: System::Void FMReaderBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 card cd;
+			 String^ temp;
+			 cd.GetReaders();
+			 //FMReaderShow->Text=temp;
 		 }
 };
 }

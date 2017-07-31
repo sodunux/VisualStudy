@@ -7,7 +7,14 @@ namespace VisualStudy
 	{
 	public:
 		card(void);
-		void cardtest();
+		void GetReaders();
+		
+
+	private:
+		SCARDCONTEXT hContext;
+		array<String^>^ReaderName;
+		
+
 	};
 	
 
