@@ -1,4 +1,5 @@
 #pragma once
+#include "StdAfx.h"
 #include <WinSCard.h>
 namespace VisualStudy
 {
@@ -8,11 +9,15 @@ namespace VisualStudy
 	public:
 		card(void);
 		void GetReaders();
-		
-
-	private:
+		void ConnectReader(Byte ReaderID);
+		void DisconnectReader(); 
+		void TransmitReader(String^sendstr,String^ &recstr);
+		void ReleaseContext();                                                                                            
 		SCARDCONTEXT hContext;
 		array<String^>^ReaderName;
+		Byte ReaderCnt;
+		SCARDHANDLE hCardHandle;
+		
 		
 
 	};

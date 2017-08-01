@@ -521,6 +521,12 @@ private: System::Void FMReaderBtn_Click(System::Object^  sender, System::EventAr
 			 card cd;
 			 String^ temp;
 			 cd.GetReaders();
+			 FMReaderShow->Text=cd.ReaderName[0]+"\n";
+			 FMReaderShow->Text+=cd.ReaderName[1];
+			 cd.ConnectReader(0);
+			 cd.TransmitReader("FF09010102",temp);
+			 cd.DisconnectReader();
+			 cd.ReleaseContext();
 			 //FMReaderShow->Text=temp;
 		 }
 };

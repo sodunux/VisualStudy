@@ -68,6 +68,7 @@ String^ Cal::Pras_SAK(String^ sak)
 	{
 		try
 		{
+			
 			tmpchar=Convert::ToByte(sak->Substring(0,2),16);
 			if(tmpchar&0x20)
 			{
