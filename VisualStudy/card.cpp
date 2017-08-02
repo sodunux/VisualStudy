@@ -10,27 +10,30 @@ card::card(void)
 {
 	
 	hContext=NULL;
-	ReaderName=gcnew array<String^>(10);
-	
+	ReaderName=gcnew array<String^>(10);	
 }
 
-void card::GetReaders()
+int card::GetReaders()
 {
-	
+	int returnvalue;
 	TCHAR readerbuff[1024];
 	DWORD dwlen=1024;
 	DWORD i,j;
 	SCARDCONTEXT hSC;
 	LONG lreturn;
+	String ^ temp;
 	try
 	{
+		for(i=0;i<10;i++)
+			ReaderName[i]="";
+		ReaderCnt=0;
 		lreturn=SCardEstablishContext(SCARD_SCOPE_SYSTEM,NULL,NULL,&hSC);
 		if(lreturn!=SCARD_S_SUCCESS) throw lreturn;
 		hContext=hSC;
 
 		lreturn=SCardListReaders(hContext,NULL,(LPTSTR)readerbuff,&dwlen);
 		if(lreturn!=SCARD_S_SUCCESS) throw lreturn;
-
+		
 		for(i=0,j=0;i<(dwlen-1);i++)
 		{
 			if(readerbuff[i]=='\0')
@@ -39,18 +42,18 @@ void card::GetReaders()
 				ReaderName[j]+=readerbuff[i];
 		}
 		ReaderCnt=j;
-
+		returnvalue=0;
 	}
 	catch(...)
 	{
-		;
+		returnvalue=1;
 	}
-	
+	return returnvalue;
 }
 
-void card::ConnectReader(Byte ReaderID)
+int card::ConnectReader(int ReaderID)
 {
-	
+	int returnvalue;
 	DWORD dwAP;
 	DWORD ret,i;
 	TCHAR reader[1000];
@@ -69,46 +72,55 @@ void card::ConnectReader(Byte ReaderID)
 		if(ret!=SCARD_S_SUCCESS)throw ret;
 
 		hCardHandle=handletemp;
+		returnvalue=0;
 
 	}
 	catch(...)
 	{
-		;
+		returnvalue=1;
 	}
-
+	return returnvalue;
 
 
 }
 
-void card::DisconnectReader()
+int card::DisconnectReader()
 {
+	int returnvalue;
 	DWORD ret;
 	try
 	{
 		ret=SCardDisconnect(hCardHandle,SCARD_LEAVE_CARD);
 		if(ret!=SCARD_S_SUCCESS)throw ret;
+		returnvalue=0;
 	}
 	catch(...)
 	{
-		;
+		returnvalue=1;
 	}
+	return returnvalue;
 }
 
-void card::ReleaseContext()
+int card::ReleaseContext()
 {
+	int returnvalue;
 	DWORD ret;
 	try
 	{
 		ret=SCardReleaseContext(hContext);
+		if(ret!=SCARD_S_SUCCESS)throw ret;
+		returnvalue=0;
 	}
 	catch(...)
 	{
-		;
+		returnvalue=1;
 	}
+	return returnvalue;
 }
 
-void card::TransmitReader(String^sendstr,String^ &recstr)
+int card::TransmitReader(String^sendstr,String^ &recstr)
 {
+	int returnvalue;
 	DWORD ret,i;
 	String ^temp;
 	Byte sendbuff[1024],recebuff[1024];
@@ -131,21 +143,32 @@ void card::TransmitReader(String^sendstr,String^ &recstr)
 		ret=SCardBeginTransaction(hCardHandle); 
 		if(ret!=SCARD_S_SUCCESS)throw ret;
 		ret=SCardTransmit(hCardHandle,&g_rgSCardT1Pci,sendbuff,sendlen,NULL,recebuff,&recelen);
-		if(ret!=SCARD_S_SUCCESS)throw ret;
+		if((ret!=SCARD_S_SUCCESS)||recelen==0)throw ret;
 		ret=SCardEndTransaction(hCardHandle,SCARD_LEAVE_CARD);
 		if(ret!=SCARD_S_SUCCESS)throw ret;
 
 		recstr="";
 		for(i=0;i<recelen;i++)
 		{
-			recstr+=Convert::ToString(recebuff[i],16);
+			if(recebuff[i]<0x10)
+				temp="0";
+			else 
+				temp="";
+			temp+=Convert::ToString(recebuff[i],16);	
+			recstr+=temp;
 		}
+		returnvalue=0;
 
 	}
 	catch(...)
 	{
-		;
+		returnvalue=1;
 	}
+	return returnvalue;
 }
 
-
+card::~card()
+{
+	DisconnectReader();
+	ReleaseContext();
+}

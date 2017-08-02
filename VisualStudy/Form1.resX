@@ -153,12 +153,6 @@
   <data name="&gt;&gt;P14443_Text1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="shapeContainer2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="shapeContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0, 75, 23</value>
   </metadata>
@@ -168,17 +162,11 @@
   <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>75, 23</value>
   </metadata>
-  <data name="lineShape2.X1" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="shapeContainer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="lineShape2.X2" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="lineShape2.Y1" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lineShape2.Y2" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="shapeContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="shapeContainer2.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 262</value>
@@ -318,29 +306,26 @@
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="P14443_Btn1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0, 75, 23</value>
+  </metadata>
+  <metadata name="lineShape2.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>75, 23</value>
+  </metadata>
+  <data name="lineShape2.X1" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="P14443_Btn1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="lineShape2.X2" type="System.Int32, mscorlib">
+    <value>75</value>
   </data>
-  <data name="P14443_Btn1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lineShape2.Y1" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="P14443_Btn1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 265</value>
-  </data>
-  <data name="P14443_Btn1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 60</value>
-  </data>
-  <data name="P14443_Btn1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>514, 63</value>
-  </data>
-  <data name="P14443_Btn1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="P14443_Btn1.Text" xml:space="preserve">
-    <value>计算</value>
+  <data name="lineShape2.Y2" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
   <data name="&gt;&gt;P14443_Btn1.Name" xml:space="preserve">
     <value>P14443_Btn1</value>
@@ -379,6 +364,405 @@
     <value>tabcontrol</value>
   </data>
   <data name="&gt;&gt;Calculate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>Endurance</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Endurance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="Endurance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>520, 331</value>
+  </data>
+  <data name="Endurance.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Endurance.Text" xml:space="preserve">
+    <value>Endurance</value>
+  </data>
+  <data name="&gt;&gt;Endurance.Name" xml:space="preserve">
+    <value>Endurance</value>
+  </data>
+  <data name="&gt;&gt;Endurance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Endurance.Parent" xml:space="preserve">
+    <value>tabcontrol</value>
+  </data>
+  <data name="&gt;&gt;Endurance.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="splitContainer3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 101</value>
+  </data>
+  <data name="FMR_input.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="FMR_input.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="FMR_input.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 142</value>
+  </data>
+  <data name="FMR_input.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="FMR_input.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;FMR_input.Name" xml:space="preserve">
+    <value>FMR_input</value>
+  </data>
+  <data name="&gt;&gt;FMR_input.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMR_input.Parent" xml:space="preserve">
+    <value>splitContainer3.Panel1</value>
+  </data>
+  <data name="&gt;&gt;FMR_input.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel1.Name" xml:space="preserve">
+    <value>splitContainer3.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FMR_Show.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="FMR_Show.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="FMR_Show.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 142</value>
+  </data>
+  <data name="FMR_Show.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FMR_Show.Name" xml:space="preserve">
+    <value>FMR_Show</value>
+  </data>
+  <data name="&gt;&gt;FMR_Show.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMR_Show.Parent" xml:space="preserve">
+    <value>splitContainer3.Panel2</value>
+  </data>
+  <data name="&gt;&gt;FMR_Show.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel2.Name" xml:space="preserve">
+    <value>splitContainer3.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 142</value>
+  </data>
+  <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
+    <value>238</value>
+  </data>
+  <data name="splitContainer3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Name" xml:space="preserve">
+    <value>splitContainer3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.Parent" xml:space="preserve">
+    <value>FMR_Tab1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FMR_SendApduBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="FMR_SendApduBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 243</value>
+  </data>
+  <data name="FMR_SendApduBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 49</value>
+  </data>
+  <data name="FMR_SendApduBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="FMR_SendApduBtn.Text" xml:space="preserve">
+    <value>SendAPDU</value>
+  </data>
+  <data name="&gt;&gt;FMR_SendApduBtn.Name" xml:space="preserve">
+    <value>FMR_SendApduBtn</value>
+  </data>
+  <data name="&gt;&gt;FMR_SendApduBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMR_SendApduBtn.Parent" xml:space="preserve">
+    <value>FMR_Tab1</value>
+  </data>
+  <data name="&gt;&gt;FMR_SendApduBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;FMR_ConnectBtn.Name" xml:space="preserve">
+    <value>FMR_ConnectBtn</value>
+  </data>
+  <data name="&gt;&gt;FMR_ConnectBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMR_ConnectBtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;FMR_ConnectBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FMR_GetReaderBtn.Name" xml:space="preserve">
+    <value>FMR_GetReaderBtn</value>
+  </data>
+  <data name="&gt;&gt;FMR_GetReaderBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMR_GetReaderBtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;FMR_GetReaderBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FMReader_NameBox.Name" xml:space="preserve">
+    <value>FMReader_NameBox</value>
+  </data>
+  <data name="&gt;&gt;FMReader_NameBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMReader_NameBox.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;FMReader_NameBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 59</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>FMR_Tab1</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FMR_Tab1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="FMR_Tab1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="FMR_Tab1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 295</value>
+  </data>
+  <data name="FMR_Tab1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="FMR_Tab1.Text" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="&gt;&gt;FMR_Tab1.Name" xml:space="preserve">
+    <value>FMR_Tab1</value>
+  </data>
+  <data name="&gt;&gt;FMR_Tab1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMR_Tab1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;FMR_Tab1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>514, 325</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>FMReader</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FMReader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="FMReader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="FMReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>520, 331</value>
+  </data>
+  <data name="FMReader.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="FMReader.Text" xml:space="preserve">
+    <value>FMReader</value>
+  </data>
+  <data name="&gt;&gt;FMReader.Name" xml:space="preserve">
+    <value>FMReader</value>
+  </data>
+  <data name="&gt;&gt;FMReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FMReader.Parent" xml:space="preserve">
+    <value>tabcontrol</value>
+  </data>
+  <data name="&gt;&gt;FMReader.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabcontrol.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabcontrol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabcontrol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 361</value>
+  </data>
+  <data name="tabcontrol.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabcontrol.Name" xml:space="preserve">
+    <value>tabcontrol</value>
+  </data>
+  <data name="&gt;&gt;tabcontrol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabcontrol.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabcontrol.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="P14443_Btn1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="P14443_Btn1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="P14443_Btn1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="P14443_Btn1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 265</value>
+  </data>
+  <data name="P14443_Btn1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 60</value>
+  </data>
+  <data name="P14443_Btn1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>514, 63</value>
+  </data>
+  <data name="P14443_Btn1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="P14443_Btn1.Text" xml:space="preserve">
+    <value>计算</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.Name" xml:space="preserve">
+    <value>P14443_Btn1</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.Parent" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="&gt;&gt;P14443_Btn1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 176</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>串口配置</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>Endurance</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -786,152 +1170,83 @@
   <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="FMR_ConnectBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
   </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 176</value>
+  <data name="FMR_ConnectBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 25</value>
   </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="FMR_ConnectBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 34</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>串口配置</value>
+  <data name="FMR_ConnectBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="FMR_ConnectBtn.Text" xml:space="preserve">
+    <value>ConnectReader</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;FMR_ConnectBtn.Name" xml:space="preserve">
+    <value>FMR_ConnectBtn</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>Endurance</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Endurance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
-  </data>
-  <data name="Endurance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>520, 331</value>
-  </data>
-  <data name="Endurance.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Endurance.Text" xml:space="preserve">
-    <value>Endurance</value>
-  </data>
-  <data name="&gt;&gt;Endurance.Name" xml:space="preserve">
-    <value>Endurance</value>
-  </data>
-  <data name="&gt;&gt;Endurance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Endurance.Parent" xml:space="preserve">
-    <value>tabcontrol</value>
-  </data>
-  <data name="&gt;&gt;Endurance.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="FMReaderBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 201</value>
-  </data>
-  <data name="FMReaderBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="FMReaderBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="FMReaderBtn.Text" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;FMReaderBtn.Name" xml:space="preserve">
-    <value>FMReaderBtn</value>
-  </data>
-  <data name="&gt;&gt;FMReaderBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;FMR_ConnectBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FMReaderBtn.Parent" xml:space="preserve">
-    <value>FMReader</value>
+  <data name="&gt;&gt;FMR_ConnectBtn.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;FMReaderBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;FMR_ConnectBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="FMReaderShow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 64</value>
+  <data name="FMR_GetReaderBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="FMReaderShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 82</value>
+  <data name="FMR_GetReaderBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
   </data>
-  <data name="FMReaderShow.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="FMR_GetReaderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 34</value>
   </data>
-  <data name="FMReaderShow.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;FMReaderShow.Name" xml:space="preserve">
-    <value>FMReaderShow</value>
-  </data>
-  <data name="&gt;&gt;FMReaderShow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FMReaderShow.Parent" xml:space="preserve">
-    <value>FMReader</value>
-  </data>
-  <data name="&gt;&gt;FMReaderShow.ZOrder" xml:space="preserve">
+  <data name="FMR_GetReaderBtn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="FMReader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+  <data name="FMR_GetReaderBtn.Text" xml:space="preserve">
+    <value>GetReaders</value>
   </data>
-  <data name="FMReader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;FMR_GetReaderBtn.Name" xml:space="preserve">
+    <value>FMR_GetReaderBtn</value>
   </data>
-  <data name="FMReader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>520, 331</value>
+  <data name="&gt;&gt;FMR_GetReaderBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="FMReader.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;FMR_GetReaderBtn.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="FMReader.Text" xml:space="preserve">
-    <value>FMReader</value>
+  <data name="&gt;&gt;FMR_GetReaderBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;FMReader.Name" xml:space="preserve">
-    <value>FMReader</value>
+  <data name="FMReader_NameBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="&gt;&gt;FMReader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FMReader.Parent" xml:space="preserve">
-    <value>tabcontrol</value>
-  </data>
-  <data name="&gt;&gt;FMReader.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabcontrol.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tabcontrol.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="FMReader_NameBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="tabcontrol.Size" type="System.Drawing.Size, System.Drawing">
-    <value>528, 361</value>
+  <data name="FMReader_NameBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 25</value>
   </data>
-  <data name="tabcontrol.TabIndex" type="System.Int32, mscorlib">
+  <data name="FMReader_NameBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;tabcontrol.Name" xml:space="preserve">
-    <value>tabcontrol</value>
+  <data name="&gt;&gt;FMReader_NameBox.Name" xml:space="preserve">
+    <value>FMReader_NameBox</value>
   </data>
-  <data name="&gt;&gt;tabcontrol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;FMReader_NameBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabcontrol.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;FMReader_NameBox.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;tabcontrol.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;FMReader_NameBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="serialport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

@@ -77,8 +77,33 @@ namespace VisualStudy {
 	private: System::Windows::Forms::Button^  endurance_openport;
 	private: System::Windows::Forms::Label^  endurance_label6;
 	private: System::Windows::Forms::TabPage^  FMReader;
-	private: System::Windows::Forms::Button^  FMReaderBtn;
-	private: System::Windows::Forms::RichTextBox^  FMReaderShow;
+	private: System::Windows::Forms::TabControl^  tabControl1;
+	private: System::Windows::Forms::TabPage^  FMR_Tab1;
+	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::ComboBox^  FMReader_NameBox;
+
+
+
+
+	private: System::Windows::Forms::Button^  FMR_ConnectBtn;
+	private: System::Windows::Forms::Button^  FMR_GetReaderBtn;
+	private: System::Windows::Forms::SplitContainer^  splitContainer3;
+	private: System::Windows::Forms::RichTextBox^  FMR_input;
+	private: System::Windows::Forms::Label^  FMR_Show;
+
+
+	private: System::Windows::Forms::Button^  FMR_SendApduBtn;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -136,9 +161,17 @@ namespace VisualStudy {
 			this->Endurance_comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->Endurance_comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->FMReader = (gcnew System::Windows::Forms::TabPage());
-			this->FMReaderBtn = (gcnew System::Windows::Forms::Button());
-			this->FMReaderShow = (gcnew System::Windows::Forms::RichTextBox());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->FMR_Tab1 = (gcnew System::Windows::Forms::TabPage());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->FMR_ConnectBtn = (gcnew System::Windows::Forms::Button());
+			this->FMR_GetReaderBtn = (gcnew System::Windows::Forms::Button());
+			this->FMReader_NameBox = (gcnew System::Windows::Forms::ComboBox());
 			this->serialport = (gcnew System::IO::Ports::SerialPort(this->components));
+			this->FMR_SendApduBtn = (gcnew System::Windows::Forms::Button());
+			this->splitContainer3 = (gcnew System::Windows::Forms::SplitContainer());
+			this->FMR_input = (gcnew System::Windows::Forms::RichTextBox());
+			this->FMR_Show = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
@@ -152,6 +185,13 @@ namespace VisualStudy {
 			this->splitContainer2->Panel2->SuspendLayout();
 			this->splitContainer2->SuspendLayout();
 			this->FMReader->SuspendLayout();
+			this->tabControl1->SuspendLayout();
+			this->FMR_Tab1->SuspendLayout();
+			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer3))->BeginInit();
+			this->splitContainer3->Panel1->SuspendLayout();
+			this->splitContainer3->Panel2->SuspendLayout();
+			this->splitContainer3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// splitContainer1
@@ -345,27 +385,88 @@ namespace VisualStudy {
 			// 
 			// FMReader
 			// 
-			this->FMReader->Controls->Add(this->FMReaderBtn);
-			this->FMReader->Controls->Add(this->FMReaderShow);
+			this->FMReader->Controls->Add(this->tabControl1);
 			resources->ApplyResources(this->FMReader, L"FMReader");
 			this->FMReader->Name = L"FMReader";
 			this->FMReader->UseVisualStyleBackColor = true;
 			// 
-			// FMReaderBtn
+			// tabControl1
 			// 
-			resources->ApplyResources(this->FMReaderBtn, L"FMReaderBtn");
-			this->FMReaderBtn->Name = L"FMReaderBtn";
-			this->FMReaderBtn->UseVisualStyleBackColor = true;
-			this->FMReaderBtn->Click += gcnew System::EventHandler(this, &Form1::FMReaderBtn_Click);
+			this->tabControl1->Controls->Add(this->FMR_Tab1);
+			resources->ApplyResources(this->tabControl1, L"tabControl1");
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
 			// 
-			// FMReaderShow
+			// FMR_Tab1
 			// 
-			resources->ApplyResources(this->FMReaderShow, L"FMReaderShow");
-			this->FMReaderShow->Name = L"FMReaderShow";
+			this->FMR_Tab1->Controls->Add(this->splitContainer3);
+			this->FMR_Tab1->Controls->Add(this->FMR_SendApduBtn);
+			this->FMR_Tab1->Controls->Add(this->panel1);
+			resources->ApplyResources(this->FMR_Tab1, L"FMR_Tab1");
+			this->FMR_Tab1->Name = L"FMR_Tab1";
+			this->FMR_Tab1->UseVisualStyleBackColor = true;
+			// 
+			// panel1
+			// 
+			resources->ApplyResources(this->panel1, L"panel1");
+			this->panel1->Controls->Add(this->FMR_ConnectBtn);
+			this->panel1->Controls->Add(this->FMR_GetReaderBtn);
+			this->panel1->Controls->Add(this->FMReader_NameBox);
+			this->panel1->Name = L"panel1";
+			// 
+			// FMR_ConnectBtn
+			// 
+			resources->ApplyResources(this->FMR_ConnectBtn, L"FMR_ConnectBtn");
+			this->FMR_ConnectBtn->Name = L"FMR_ConnectBtn";
+			this->FMR_ConnectBtn->UseVisualStyleBackColor = true;
+			this->FMR_ConnectBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_ConnectBtn_Click);
+			// 
+			// FMR_GetReaderBtn
+			// 
+			resources->ApplyResources(this->FMR_GetReaderBtn, L"FMR_GetReaderBtn");
+			this->FMR_GetReaderBtn->Name = L"FMR_GetReaderBtn";
+			this->FMR_GetReaderBtn->UseVisualStyleBackColor = true;
+			this->FMR_GetReaderBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_GetReaderBtn_Click);
+			// 
+			// FMReader_NameBox
+			// 
+			resources->ApplyResources(this->FMReader_NameBox, L"FMReader_NameBox");
+			this->FMReader_NameBox->FormattingEnabled = true;
+			this->FMReader_NameBox->Name = L"FMReader_NameBox";
 			// 
 			// serialport
 			// 
 			this->serialport->Parity = System::IO::Ports::Parity::Odd;
+			// 
+			// FMR_SendApduBtn
+			// 
+			resources->ApplyResources(this->FMR_SendApduBtn, L"FMR_SendApduBtn");
+			this->FMR_SendApduBtn->Name = L"FMR_SendApduBtn";
+			this->FMR_SendApduBtn->UseVisualStyleBackColor = true;
+			this->FMR_SendApduBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_SendApduBtn_Click);
+			// 
+			// splitContainer3
+			// 
+			resources->ApplyResources(this->splitContainer3, L"splitContainer3");
+			this->splitContainer3->Name = L"splitContainer3";
+			// 
+			// splitContainer3.Panel1
+			// 
+			this->splitContainer3->Panel1->Controls->Add(this->FMR_input);
+			// 
+			// splitContainer3.Panel2
+			// 
+			this->splitContainer3->Panel2->Controls->Add(this->FMR_Show);
+			// 
+			// FMR_input
+			// 
+			resources->ApplyResources(this->FMR_input, L"FMR_input");
+			this->FMR_input->Name = L"FMR_input";
+			// 
+			// FMR_Show
+			// 
+			resources->ApplyResources(this->FMR_Show, L"FMR_Show");
+			this->FMR_Show->Name = L"FMR_Show";
 			// 
 			// Form1
 			// 
@@ -391,6 +492,13 @@ namespace VisualStudy {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer2))->EndInit();
 			this->splitContainer2->ResumeLayout(false);
 			this->FMReader->ResumeLayout(false);
+			this->tabControl1->ResumeLayout(false);
+			this->FMR_Tab1->ResumeLayout(false);
+			this->panel1->ResumeLayout(false);
+			this->splitContainer3->Panel1->ResumeLayout(false);
+			this->splitContainer3->Panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer3))->EndInit();
+			this->splitContainer3->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -399,7 +507,7 @@ private: void P14443_Print(String ^ tmpstr)
 		 {
 			 P14443_Lab1->Text=tmpstr;
 		 }
-
+private: card reader;
 
 private: System::Void Pg14443_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
@@ -517,17 +625,53 @@ private: System::Void groupBox2_Enter(System::Object^  sender, System::EventArgs
 		 }
 private: System::Void notifyIcon1_MouseDoubleClick(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 		 }
-private: System::Void FMReaderBtn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 card cd;
-			 String^ temp;
-			 cd.GetReaders();
-			 FMReaderShow->Text=cd.ReaderName[0]+"\n";
-			 FMReaderShow->Text+=cd.ReaderName[1];
-			 cd.ConnectReader(0);
-			 cd.TransmitReader("FF09010102",temp);
-			 cd.DisconnectReader();
-			 cd.ReleaseContext();
-			 //FMReaderShow->Text=temp;
+private: System::Void FMR_GetReaderBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			int ret,i;
+			String^ temp;
+			try
+			{
+				FMReader_NameBox->Items->Clear();
+				FMReader_NameBox->Text="";
+				ret=reader.GetReaders();
+				if((reader.ReaderCnt==0)||ret) throw ret;
+				for(i=0;i<reader.ReaderCnt;i++)
+				{
+					 FMReader_NameBox->Items->Add(reader.ReaderName[i]);
+				} 
+				FMReader_NameBox->Text=reader.ReaderName[0];
+			}
+			catch(...)
+			{
+				FMReader_NameBox->Text="No Readers";
+			}
+		 }
+private: System::Void FMR_ConnectBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 int ret;
+			 try
+			 {
+				 ret=reader.ConnectReader(FMReader_NameBox->SelectedIndex);
+				 if(ret) throw ret;
+				 FMR_Show->Text="Connect Succeed!";
+			 }
+			 catch(...)
+			 {
+				 FMR_Show->Text="Connect Failed!";
+			 }
+		 }
+private: System::Void FMR_SendApduBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^ temp;
+			 int ret;
+			 try
+			 {
+				 ret=reader.TransmitReader(FMR_input->Text,temp);
+				 if(ret) throw ret;
+				 FMR_Show->Text=temp;
+
+			 }
+			 catch(...)
+			 {
+				 FMR_Show->Text="Send Failed!"; 
+			 }
 		 }
 };
 }

@@ -8,11 +8,13 @@ namespace VisualStudy
 	{
 	public:
 		card(void);
-		void GetReaders();
-		void ConnectReader(Byte ReaderID);
-		void DisconnectReader(); 
-		void TransmitReader(String^sendstr,String^ &recstr);
-		void ReleaseContext();                                                                                            
+		int GetReaders();
+		int ConnectReader(int ReaderID);
+		int DisconnectReader(); 
+		int TransmitReader(String^sendstr,String^ &recstr);
+		int ReleaseContext(); 
+		~card();
+
 		SCARDCONTEXT hContext;
 		array<String^>^ReaderName;
 		Byte ReaderCnt;
