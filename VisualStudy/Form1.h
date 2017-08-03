@@ -61,17 +61,17 @@ namespace VisualStudy {
 
 	private: System::IO::Ports::SerialPort^  serialport;
 	private: System::Windows::Forms::TabPage^  FMReader;
-	private: System::Windows::Forms::TabControl^  tabControl1;
-	private: System::Windows::Forms::TabPage^  FMR_Tab1;
-	private: System::Windows::Forms::SplitContainer^  splitContainer3;
-	private: System::Windows::Forms::RichTextBox^  FMR_input;
-	private: System::Windows::Forms::Label^  FMR_Show;
-	private: System::Windows::Forms::Button^  FMR_SendApduBtn;
-	private: System::Windows::Forms::Panel^  panel1;
-	private: System::Windows::Forms::SplitContainer^  splitContainer4;
-	private: System::Windows::Forms::Button^  FMR_GetReaderBtn;
-	private: System::Windows::Forms::Button^  FMR_ConnectBtn;
-	private: System::Windows::Forms::ComboBox^  FMReader_NameBox;
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::TabPage^  Endurance;
 	private: System::Windows::Forms::GroupBox^  groupBox1;
 	private: System::Windows::Forms::SplitContainer^  splitContainer2;
@@ -96,6 +96,30 @@ namespace VisualStudy {
 	private: System::Windows::Forms::Label^  P14443_Lab1;
 	private: System::Windows::Forms::Button^  P14443_Btn1;
 	private: System::Windows::Forms::TabControl^  tabcontrol;
+	private: System::Windows::Forms::TabControl^  tabControl1;
+	private: System::Windows::Forms::TabPage^  FMR_Tab1;
+	private: System::Windows::Forms::SplitContainer^  splitContainer3;
+	private: System::Windows::Forms::RichTextBox^  FMR_input;
+	private: System::Windows::Forms::Label^  FMR_Show;
+	private: System::Windows::Forms::Button^  FMR_SendApduBtn;
+	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::SplitContainer^  splitContainer4;
+	private: System::Windows::Forms::Button^  FMR_GetReaderBtn;
+	private: System::Windows::Forms::Button^  FMR_ConnectBtn;
+	private: System::Windows::Forms::ComboBox^  FMReader_NameBox;
+	private: System::Windows::Forms::TabPage^  tabPage1;
+	private: System::Windows::Forms::Panel^  panel2;
+	private: System::Windows::Forms::Button^  ColdResetBtn;
+	private: System::Windows::Forms::Button^  InitTdaBtn;
+	private: System::Windows::Forms::SplitContainer^  splitContainer5;
+	private: System::Windows::Forms::TextBox^  CTPps1;
+	private: System::Windows::Forms::ComboBox^  CTVoltSelBox;
+	private: System::Windows::Forms::Button^  CTPpsBtn;
+	private: System::Windows::Forms::Button^  CTSentBtn;
+	private: System::Windows::Forms::RichTextBox^  CtInput;
+	private: System::Windows::Forms::RichTextBox^  CTShow;
+
+
 
 
 
@@ -180,51 +204,68 @@ namespace VisualStudy {
 			this->FMReader = (gcnew System::Windows::Forms::TabPage());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->FMR_Tab1 = (gcnew System::Windows::Forms::TabPage());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->FMReader_NameBox = (gcnew System::Windows::Forms::ComboBox());
-			this->splitContainer4 = (gcnew System::Windows::Forms::SplitContainer());
-			this->FMR_ConnectBtn = (gcnew System::Windows::Forms::Button());
-			this->FMR_GetReaderBtn = (gcnew System::Windows::Forms::Button());
-			this->FMR_SendApduBtn = (gcnew System::Windows::Forms::Button());
 			this->splitContainer3 = (gcnew System::Windows::Forms::SplitContainer());
-			this->FMR_Show = (gcnew System::Windows::Forms::Label());
 			this->FMR_input = (gcnew System::Windows::Forms::RichTextBox());
+			this->FMR_Show = (gcnew System::Windows::Forms::Label());
+			this->FMR_SendApduBtn = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->splitContainer4 = (gcnew System::Windows::Forms::SplitContainer());
+			this->FMR_GetReaderBtn = (gcnew System::Windows::Forms::Button());
+			this->FMR_ConnectBtn = (gcnew System::Windows::Forms::Button());
+			this->FMReader_NameBox = (gcnew System::Windows::Forms::ComboBox());
+			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->splitContainer5 = (gcnew System::Windows::Forms::SplitContainer());
+			this->CtInput = (gcnew System::Windows::Forms::RichTextBox());
+			this->CTShow = (gcnew System::Windows::Forms::RichTextBox());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->CTPps1 = (gcnew System::Windows::Forms::TextBox());
+			this->CTVoltSelBox = (gcnew System::Windows::Forms::ComboBox());
+			this->CTPpsBtn = (gcnew System::Windows::Forms::Button());
+			this->CTSentBtn = (gcnew System::Windows::Forms::Button());
+			this->ColdResetBtn = (gcnew System::Windows::Forms::Button());
+			this->InitTdaBtn = (gcnew System::Windows::Forms::Button());
 			this->Endurance = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->splitContainer2 = (gcnew System::Windows::Forms::SplitContainer());
-			this->Endurance_comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->Endurance_comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->Endurance_comboBox3 = (gcnew System::Windows::Forms::ComboBox());
-			this->Endurance_comboBox4 = (gcnew System::Windows::Forms::ComboBox());
-			this->Endurance_comboBox5 = (gcnew System::Windows::Forms::ComboBox());
-			this->endurance_openport = (gcnew System::Windows::Forms::Button());
-			this->Endurance_label1 = (gcnew System::Windows::Forms::Label());
-			this->Endurance_label2 = (gcnew System::Windows::Forms::Label());
-			this->Endurance_label3 = (gcnew System::Windows::Forms::Label());
-			this->Endurance_label4 = (gcnew System::Windows::Forms::Label());
-			this->Endurance_label5 = (gcnew System::Windows::Forms::Label());
 			this->endurance_label6 = (gcnew System::Windows::Forms::Label());
+			this->Endurance_label5 = (gcnew System::Windows::Forms::Label());
+			this->Endurance_label4 = (gcnew System::Windows::Forms::Label());
+			this->Endurance_label3 = (gcnew System::Windows::Forms::Label());
+			this->Endurance_label2 = (gcnew System::Windows::Forms::Label());
+			this->Endurance_label1 = (gcnew System::Windows::Forms::Label());
+			this->endurance_openport = (gcnew System::Windows::Forms::Button());
+			this->Endurance_comboBox5 = (gcnew System::Windows::Forms::ComboBox());
+			this->Endurance_comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->Endurance_comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->Endurance_comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->Endurance_comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->Calculate = (gcnew System::Windows::Forms::TabPage());
-			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
-			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
-			this->P14443_Cbox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->P14443_Text1 = (gcnew System::Windows::Forms::RichTextBox());
-			this->tabcontrol = (gcnew System::Windows::Forms::TabControl());
 			this->shapeContainer2 = (gcnew Microsoft::VisualBasic::PowerPacks::ShapeContainer());
 			this->lineShape2 = (gcnew Microsoft::VisualBasic::PowerPacks::LineShape());
+			this->P14443_Cbox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
+			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
+			this->tabcontrol = (gcnew System::Windows::Forms::TabControl());
 			this->FMReader->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->FMR_Tab1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer3))->BeginInit();
+			this->splitContainer3->Panel1->SuspendLayout();
+			this->splitContainer3->Panel2->SuspendLayout();
+			this->splitContainer3->SuspendLayout();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer4))->BeginInit();
 			this->splitContainer4->Panel1->SuspendLayout();
 			this->splitContainer4->Panel2->SuspendLayout();
 			this->splitContainer4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer3))->BeginInit();
-			this->splitContainer3->Panel1->SuspendLayout();
-			this->splitContainer3->Panel2->SuspendLayout();
-			this->splitContainer3->SuspendLayout();
+			this->tabPage1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer5))->BeginInit();
+			this->splitContainer5->Panel1->SuspendLayout();
+			this->splitContainer5->Panel2->SuspendLayout();
+			this->splitContainer5->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->Endurance->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer2))->BeginInit();
@@ -253,6 +294,7 @@ namespace VisualStudy {
 			// tabControl1
 			// 
 			this->tabControl1->Controls->Add(this->FMR_Tab1);
+			this->tabControl1->Controls->Add(this->tabPage1);
 			resources->ApplyResources(this->tabControl1, L"tabControl1");
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
@@ -265,53 +307,6 @@ namespace VisualStudy {
 			resources->ApplyResources(this->FMR_Tab1, L"FMR_Tab1");
 			this->FMR_Tab1->Name = L"FMR_Tab1";
 			this->FMR_Tab1->UseVisualStyleBackColor = true;
-			// 
-			// panel1
-			// 
-			this->panel1->Controls->Add(this->splitContainer4);
-			this->panel1->Controls->Add(this->FMReader_NameBox);
-			resources->ApplyResources(this->panel1, L"panel1");
-			this->panel1->Name = L"panel1";
-			// 
-			// FMReader_NameBox
-			// 
-			resources->ApplyResources(this->FMReader_NameBox, L"FMReader_NameBox");
-			this->FMReader_NameBox->FormattingEnabled = true;
-			this->FMReader_NameBox->Name = L"FMReader_NameBox";
-			// 
-			// splitContainer4
-			// 
-			resources->ApplyResources(this->splitContainer4, L"splitContainer4");
-			this->splitContainer4->Name = L"splitContainer4";
-			// 
-			// splitContainer4.Panel1
-			// 
-			this->splitContainer4->Panel1->Controls->Add(this->FMR_GetReaderBtn);
-			// 
-			// splitContainer4.Panel2
-			// 
-			this->splitContainer4->Panel2->Controls->Add(this->FMR_ConnectBtn);
-			// 
-			// FMR_ConnectBtn
-			// 
-			resources->ApplyResources(this->FMR_ConnectBtn, L"FMR_ConnectBtn");
-			this->FMR_ConnectBtn->Name = L"FMR_ConnectBtn";
-			this->FMR_ConnectBtn->UseVisualStyleBackColor = true;
-			this->FMR_ConnectBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_ConnectBtn_Click);
-			// 
-			// FMR_GetReaderBtn
-			// 
-			resources->ApplyResources(this->FMR_GetReaderBtn, L"FMR_GetReaderBtn");
-			this->FMR_GetReaderBtn->Name = L"FMR_GetReaderBtn";
-			this->FMR_GetReaderBtn->UseVisualStyleBackColor = true;
-			this->FMR_GetReaderBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_GetReaderBtn_Click);
-			// 
-			// FMR_SendApduBtn
-			// 
-			resources->ApplyResources(this->FMR_SendApduBtn, L"FMR_SendApduBtn");
-			this->FMR_SendApduBtn->Name = L"FMR_SendApduBtn";
-			this->FMR_SendApduBtn->UseVisualStyleBackColor = true;
-			this->FMR_SendApduBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_SendApduBtn_Click);
 			// 
 			// splitContainer3
 			// 
@@ -326,15 +321,145 @@ namespace VisualStudy {
 			// 
 			this->splitContainer3->Panel2->Controls->Add(this->FMR_Show);
 			// 
+			// FMR_input
+			// 
+			resources->ApplyResources(this->FMR_input, L"FMR_input");
+			this->FMR_input->Name = L"FMR_input";
+			// 
 			// FMR_Show
 			// 
 			resources->ApplyResources(this->FMR_Show, L"FMR_Show");
 			this->FMR_Show->Name = L"FMR_Show";
 			// 
-			// FMR_input
+			// FMR_SendApduBtn
 			// 
-			resources->ApplyResources(this->FMR_input, L"FMR_input");
-			this->FMR_input->Name = L"FMR_input";
+			resources->ApplyResources(this->FMR_SendApduBtn, L"FMR_SendApduBtn");
+			this->FMR_SendApduBtn->Name = L"FMR_SendApduBtn";
+			this->FMR_SendApduBtn->UseVisualStyleBackColor = true;
+			this->FMR_SendApduBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_SendApduBtn_Click);
+			// 
+			// panel1
+			// 
+			this->panel1->Controls->Add(this->splitContainer4);
+			this->panel1->Controls->Add(this->FMReader_NameBox);
+			resources->ApplyResources(this->panel1, L"panel1");
+			this->panel1->Name = L"panel1";
+			// 
+			// splitContainer4
+			// 
+			resources->ApplyResources(this->splitContainer4, L"splitContainer4");
+			this->splitContainer4->Name = L"splitContainer4";
+			// 
+			// splitContainer4.Panel1
+			// 
+			this->splitContainer4->Panel1->Controls->Add(this->FMR_GetReaderBtn);
+			// 
+			// splitContainer4.Panel2
+			// 
+			this->splitContainer4->Panel2->Controls->Add(this->FMR_ConnectBtn);
+			// 
+			// FMR_GetReaderBtn
+			// 
+			resources->ApplyResources(this->FMR_GetReaderBtn, L"FMR_GetReaderBtn");
+			this->FMR_GetReaderBtn->Name = L"FMR_GetReaderBtn";
+			this->FMR_GetReaderBtn->UseVisualStyleBackColor = true;
+			this->FMR_GetReaderBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_GetReaderBtn_Click);
+			// 
+			// FMR_ConnectBtn
+			// 
+			resources->ApplyResources(this->FMR_ConnectBtn, L"FMR_ConnectBtn");
+			this->FMR_ConnectBtn->Name = L"FMR_ConnectBtn";
+			this->FMR_ConnectBtn->UseVisualStyleBackColor = true;
+			this->FMR_ConnectBtn->Click += gcnew System::EventHandler(this, &Form1::FMR_ConnectBtn_Click);
+			// 
+			// FMReader_NameBox
+			// 
+			resources->ApplyResources(this->FMReader_NameBox, L"FMReader_NameBox");
+			this->FMReader_NameBox->FormattingEnabled = true;
+			this->FMReader_NameBox->Name = L"FMReader_NameBox";
+			// 
+			// tabPage1
+			// 
+			this->tabPage1->Controls->Add(this->splitContainer5);
+			this->tabPage1->Controls->Add(this->panel2);
+			resources->ApplyResources(this->tabPage1, L"tabPage1");
+			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// splitContainer5
+			// 
+			resources->ApplyResources(this->splitContainer5, L"splitContainer5");
+			this->splitContainer5->Name = L"splitContainer5";
+			// 
+			// splitContainer5.Panel1
+			// 
+			this->splitContainer5->Panel1->Controls->Add(this->CtInput);
+			// 
+			// splitContainer5.Panel2
+			// 
+			this->splitContainer5->Panel2->Controls->Add(this->CTShow);
+			// 
+			// CtInput
+			// 
+			resources->ApplyResources(this->CtInput, L"CtInput");
+			this->CtInput->Name = L"CtInput";
+			// 
+			// CTShow
+			// 
+			resources->ApplyResources(this->CTShow, L"CTShow");
+			this->CTShow->Name = L"CTShow";
+			// 
+			// panel2
+			// 
+			this->panel2->Controls->Add(this->CTPps1);
+			this->panel2->Controls->Add(this->CTVoltSelBox);
+			this->panel2->Controls->Add(this->CTPpsBtn);
+			this->panel2->Controls->Add(this->CTSentBtn);
+			this->panel2->Controls->Add(this->ColdResetBtn);
+			this->panel2->Controls->Add(this->InitTdaBtn);
+			resources->ApplyResources(this->panel2, L"panel2");
+			this->panel2->Name = L"panel2";
+			// 
+			// CTPps1
+			// 
+			resources->ApplyResources(this->CTPps1, L"CTPps1");
+			this->CTPps1->Name = L"CTPps1";
+			// 
+			// CTVoltSelBox
+			// 
+			resources->ApplyResources(this->CTVoltSelBox, L"CTVoltSelBox");
+			this->CTVoltSelBox->FormattingEnabled = true;
+			this->CTVoltSelBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) {resources->GetString(L"CTVoltSelBox.Items"), 
+				resources->GetString(L"CTVoltSelBox.Items1"), resources->GetString(L"CTVoltSelBox.Items2")});
+			this->CTVoltSelBox->Name = L"CTVoltSelBox";
+			// 
+			// CTPpsBtn
+			// 
+			resources->ApplyResources(this->CTPpsBtn, L"CTPpsBtn");
+			this->CTPpsBtn->Name = L"CTPpsBtn";
+			this->CTPpsBtn->UseVisualStyleBackColor = true;
+			this->CTPpsBtn->Click += gcnew System::EventHandler(this, &Form1::CTPpsBtn_Click);
+			// 
+			// CTSentBtn
+			// 
+			resources->ApplyResources(this->CTSentBtn, L"CTSentBtn");
+			this->CTSentBtn->Name = L"CTSentBtn";
+			this->CTSentBtn->UseVisualStyleBackColor = true;
+			this->CTSentBtn->Click += gcnew System::EventHandler(this, &Form1::CTSentBtn_Click);
+			// 
+			// ColdResetBtn
+			// 
+			resources->ApplyResources(this->ColdResetBtn, L"ColdResetBtn");
+			this->ColdResetBtn->Name = L"ColdResetBtn";
+			this->ColdResetBtn->UseVisualStyleBackColor = true;
+			this->ColdResetBtn->Click += gcnew System::EventHandler(this, &Form1::ColdResetBtn_Click);
+			// 
+			// InitTdaBtn
+			// 
+			resources->ApplyResources(this->InitTdaBtn, L"InitTdaBtn");
+			this->InitTdaBtn->Name = L"InitTdaBtn";
+			this->InitTdaBtn->UseVisualStyleBackColor = true;
+			this->InitTdaBtn->Click += gcnew System::EventHandler(this, &Form1::InitTdaBtn_Click);
 			// 
 			// Endurance
 			// 
@@ -375,11 +500,66 @@ namespace VisualStudy {
 			this->splitContainer2->Panel2->Controls->Add(this->Endurance_comboBox2);
 			this->splitContainer2->Panel2->Controls->Add(this->Endurance_comboBox1);
 			// 
-			// Endurance_comboBox1
+			// endurance_label6
 			// 
-			resources->ApplyResources(this->Endurance_comboBox1, L"Endurance_comboBox1");
-			this->Endurance_comboBox1->FormattingEnabled = true;
-			this->Endurance_comboBox1->Name = L"Endurance_comboBox1";
+			resources->ApplyResources(this->endurance_label6, L"endurance_label6");
+			this->endurance_label6->Name = L"endurance_label6";
+			// 
+			// Endurance_label5
+			// 
+			resources->ApplyResources(this->Endurance_label5, L"Endurance_label5");
+			this->Endurance_label5->Name = L"Endurance_label5";
+			// 
+			// Endurance_label4
+			// 
+			resources->ApplyResources(this->Endurance_label4, L"Endurance_label4");
+			this->Endurance_label4->Name = L"Endurance_label4";
+			// 
+			// Endurance_label3
+			// 
+			resources->ApplyResources(this->Endurance_label3, L"Endurance_label3");
+			this->Endurance_label3->Name = L"Endurance_label3";
+			// 
+			// Endurance_label2
+			// 
+			resources->ApplyResources(this->Endurance_label2, L"Endurance_label2");
+			this->Endurance_label2->Name = L"Endurance_label2";
+			// 
+			// Endurance_label1
+			// 
+			resources->ApplyResources(this->Endurance_label1, L"Endurance_label1");
+			this->Endurance_label1->Name = L"Endurance_label1";
+			// 
+			// endurance_openport
+			// 
+			resources->ApplyResources(this->endurance_openport, L"endurance_openport");
+			this->endurance_openport->Name = L"endurance_openport";
+			this->endurance_openport->UseVisualStyleBackColor = true;
+			this->endurance_openport->Click += gcnew System::EventHandler(this, &Form1::endurance_openport_Click);
+			// 
+			// Endurance_comboBox5
+			// 
+			resources->ApplyResources(this->Endurance_comboBox5, L"Endurance_comboBox5");
+			this->Endurance_comboBox5->FormattingEnabled = true;
+			this->Endurance_comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(3) {resources->GetString(L"Endurance_comboBox5.Items"), 
+				resources->GetString(L"Endurance_comboBox5.Items1"), resources->GetString(L"Endurance_comboBox5.Items2")});
+			this->Endurance_comboBox5->Name = L"Endurance_comboBox5";
+			// 
+			// Endurance_comboBox4
+			// 
+			resources->ApplyResources(this->Endurance_comboBox4, L"Endurance_comboBox4");
+			this->Endurance_comboBox4->FormattingEnabled = true;
+			this->Endurance_comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) {resources->GetString(L"Endurance_comboBox4.Items"), 
+				resources->GetString(L"Endurance_comboBox4.Items1"), resources->GetString(L"Endurance_comboBox4.Items2")});
+			this->Endurance_comboBox4->Name = L"Endurance_comboBox4";
+			// 
+			// Endurance_comboBox3
+			// 
+			resources->ApplyResources(this->Endurance_comboBox3, L"Endurance_comboBox3");
+			this->Endurance_comboBox3->FormattingEnabled = true;
+			this->Endurance_comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(4) {resources->GetString(L"Endurance_comboBox3.Items"), 
+				resources->GetString(L"Endurance_comboBox3.Items1"), resources->GetString(L"Endurance_comboBox3.Items2"), resources->GetString(L"Endurance_comboBox3.Items3")});
+			this->Endurance_comboBox3->Name = L"Endurance_comboBox3";
 			// 
 			// Endurance_comboBox2
 			// 
@@ -390,66 +570,11 @@ namespace VisualStudy {
 				resources->GetString(L"Endurance_comboBox2.Items4")});
 			this->Endurance_comboBox2->Name = L"Endurance_comboBox2";
 			// 
-			// Endurance_comboBox3
+			// Endurance_comboBox1
 			// 
-			resources->ApplyResources(this->Endurance_comboBox3, L"Endurance_comboBox3");
-			this->Endurance_comboBox3->FormattingEnabled = true;
-			this->Endurance_comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(4) {resources->GetString(L"Endurance_comboBox3.Items"), 
-				resources->GetString(L"Endurance_comboBox3.Items1"), resources->GetString(L"Endurance_comboBox3.Items2"), resources->GetString(L"Endurance_comboBox3.Items3")});
-			this->Endurance_comboBox3->Name = L"Endurance_comboBox3";
-			// 
-			// Endurance_comboBox4
-			// 
-			resources->ApplyResources(this->Endurance_comboBox4, L"Endurance_comboBox4");
-			this->Endurance_comboBox4->FormattingEnabled = true;
-			this->Endurance_comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) {resources->GetString(L"Endurance_comboBox4.Items"), 
-				resources->GetString(L"Endurance_comboBox4.Items1"), resources->GetString(L"Endurance_comboBox4.Items2")});
-			this->Endurance_comboBox4->Name = L"Endurance_comboBox4";
-			// 
-			// Endurance_comboBox5
-			// 
-			resources->ApplyResources(this->Endurance_comboBox5, L"Endurance_comboBox5");
-			this->Endurance_comboBox5->FormattingEnabled = true;
-			this->Endurance_comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(3) {resources->GetString(L"Endurance_comboBox5.Items"), 
-				resources->GetString(L"Endurance_comboBox5.Items1"), resources->GetString(L"Endurance_comboBox5.Items2")});
-			this->Endurance_comboBox5->Name = L"Endurance_comboBox5";
-			// 
-			// endurance_openport
-			// 
-			resources->ApplyResources(this->endurance_openport, L"endurance_openport");
-			this->endurance_openport->Name = L"endurance_openport";
-			this->endurance_openport->UseVisualStyleBackColor = true;
-			this->endurance_openport->Click += gcnew System::EventHandler(this, &Form1::endurance_openport_Click);
-			// 
-			// Endurance_label1
-			// 
-			resources->ApplyResources(this->Endurance_label1, L"Endurance_label1");
-			this->Endurance_label1->Name = L"Endurance_label1";
-			// 
-			// Endurance_label2
-			// 
-			resources->ApplyResources(this->Endurance_label2, L"Endurance_label2");
-			this->Endurance_label2->Name = L"Endurance_label2";
-			// 
-			// Endurance_label3
-			// 
-			resources->ApplyResources(this->Endurance_label3, L"Endurance_label3");
-			this->Endurance_label3->Name = L"Endurance_label3";
-			// 
-			// Endurance_label4
-			// 
-			resources->ApplyResources(this->Endurance_label4, L"Endurance_label4");
-			this->Endurance_label4->Name = L"Endurance_label4";
-			// 
-			// Endurance_label5
-			// 
-			resources->ApplyResources(this->Endurance_label5, L"Endurance_label5");
-			this->Endurance_label5->Name = L"Endurance_label5";
-			// 
-			// endurance_label6
-			// 
-			resources->ApplyResources(this->endurance_label6, L"endurance_label6");
-			this->endurance_label6->Name = L"endurance_label6";
+			resources->ApplyResources(this->Endurance_comboBox1, L"Endurance_comboBox1");
+			this->Endurance_comboBox1->FormattingEnabled = true;
+			this->Endurance_comboBox1->Name = L"Endurance_comboBox1";
 			// 
 			// Calculate
 			// 
@@ -459,13 +584,6 @@ namespace VisualStudy {
 			this->Calculate->Name = L"Calculate";
 			this->Calculate->UseVisualStyleBackColor = true;
 			this->Calculate->Click += gcnew System::EventHandler(this, &Form1::Pg14443_Click);
-			// 
-			// P14443_Btn1
-			// 
-			resources->ApplyResources(this->P14443_Btn1, L"P14443_Btn1");
-			this->P14443_Btn1->Name = L"P14443_Btn1";
-			this->P14443_Btn1->UseVisualStyleBackColor = true;
-			this->P14443_Btn1->Click += gcnew System::EventHandler(this, &Form1::P14443_Btn1_Click);
 			// 
 			// splitContainer1
 			// 
@@ -483,35 +601,11 @@ namespace VisualStudy {
 			this->splitContainer1->Panel2->Controls->Add(this->P14443_Cbox1);
 			this->splitContainer1->Panel2->Controls->Add(this->P14443_Lab1);
 			// 
-			// P14443_Lab1
-			// 
-			resources->ApplyResources(this->P14443_Lab1, L"P14443_Lab1");
-			this->P14443_Lab1->Name = L"P14443_Lab1";
-			// 
-			// P14443_Cbox1
-			// 
-			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
-			this->P14443_Cbox1->FormattingEnabled = true;
-			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(7) {resources->GetString(L"P14443_Cbox1.Items"), 
-				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2"), resources->GetString(L"P14443_Cbox1.Items3"), 
-				resources->GetString(L"P14443_Cbox1.Items4"), resources->GetString(L"P14443_Cbox1.Items5"), resources->GetString(L"P14443_Cbox1.Items6")});
-			this->P14443_Cbox1->Name = L"P14443_Cbox1";
-			this->P14443_Cbox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::P14443_Cbox1_SelectedIndexChanged);
-			// 
 			// P14443_Text1
 			// 
 			resources->ApplyResources(this->P14443_Text1, L"P14443_Text1");
 			this->P14443_Text1->Name = L"P14443_Text1";
 			this->P14443_Text1->TextChanged += gcnew System::EventHandler(this, &Form1::P14443_Text1_TextChanged);
-			// 
-			// tabcontrol
-			// 
-			this->tabcontrol->Controls->Add(this->Calculate);
-			this->tabcontrol->Controls->Add(this->Endurance);
-			this->tabcontrol->Controls->Add(this->FMReader);
-			resources->ApplyResources(this->tabcontrol, L"tabcontrol");
-			this->tabcontrol->Name = L"tabcontrol";
-			this->tabcontrol->SelectedIndex = 0;
 			// 
 			// shapeContainer2
 			// 
@@ -524,6 +618,37 @@ namespace VisualStudy {
 			// 
 			this->lineShape2->Name = L"lineShape2";
 			resources->ApplyResources(this->lineShape2, L"lineShape2");
+			// 
+			// P14443_Cbox1
+			// 
+			resources->ApplyResources(this->P14443_Cbox1, L"P14443_Cbox1");
+			this->P14443_Cbox1->FormattingEnabled = true;
+			this->P14443_Cbox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) {resources->GetString(L"P14443_Cbox1.Items"), 
+				resources->GetString(L"P14443_Cbox1.Items1"), resources->GetString(L"P14443_Cbox1.Items2"), resources->GetString(L"P14443_Cbox1.Items3"), 
+				resources->GetString(L"P14443_Cbox1.Items4"), resources->GetString(L"P14443_Cbox1.Items5")});
+			this->P14443_Cbox1->Name = L"P14443_Cbox1";
+			this->P14443_Cbox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::P14443_Cbox1_SelectedIndexChanged);
+			// 
+			// P14443_Lab1
+			// 
+			resources->ApplyResources(this->P14443_Lab1, L"P14443_Lab1");
+			this->P14443_Lab1->Name = L"P14443_Lab1";
+			// 
+			// P14443_Btn1
+			// 
+			resources->ApplyResources(this->P14443_Btn1, L"P14443_Btn1");
+			this->P14443_Btn1->Name = L"P14443_Btn1";
+			this->P14443_Btn1->UseVisualStyleBackColor = true;
+			this->P14443_Btn1->Click += gcnew System::EventHandler(this, &Form1::P14443_Btn1_Click);
+			// 
+			// tabcontrol
+			// 
+			this->tabcontrol->Controls->Add(this->Calculate);
+			this->tabcontrol->Controls->Add(this->Endurance);
+			this->tabcontrol->Controls->Add(this->FMReader);
+			resources->ApplyResources(this->tabcontrol, L"tabcontrol");
+			this->tabcontrol->Name = L"tabcontrol";
+			this->tabcontrol->SelectedIndex = 0;
 			// 
 			// Form1
 			// 
@@ -538,6 +663,10 @@ namespace VisualStudy {
 			this->FMReader->ResumeLayout(false);
 			this->tabControl1->ResumeLayout(false);
 			this->FMR_Tab1->ResumeLayout(false);
+			this->splitContainer3->Panel1->ResumeLayout(false);
+			this->splitContainer3->Panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer3))->EndInit();
+			this->splitContainer3->ResumeLayout(false);
 			this->panel1->ResumeLayout(false);
 			this->splitContainer4->Panel1->ResumeLayout(false);
 			this->splitContainer4->Panel1->PerformLayout();
@@ -545,10 +674,13 @@ namespace VisualStudy {
 			this->splitContainer4->Panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer4))->EndInit();
 			this->splitContainer4->ResumeLayout(false);
-			this->splitContainer3->Panel1->ResumeLayout(false);
-			this->splitContainer3->Panel2->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer3))->EndInit();
-			this->splitContainer3->ResumeLayout(false);
+			this->tabPage1->ResumeLayout(false);
+			this->splitContainer5->Panel1->ResumeLayout(false);
+			this->splitContainer5->Panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer5))->EndInit();
+			this->splitContainer5->ResumeLayout(false);
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
 			this->Endurance->ResumeLayout(false);
 			this->groupBox1->ResumeLayout(false);
 			this->splitContainer2->Panel1->ResumeLayout(false);
@@ -606,7 +738,7 @@ private: System::Void P14443_Btn1_Click(System::Object^  sender, System::EventAr
 			 case 4://CRC_14443B
 				  P14443_Lab1->Text=caltemp.Pras_CRC14443B(tmpstr);
 				 break;
-			 case 5:
+			 case 5://ATR
 				  P14443_Lab1->Text=caltemp.Pras_ATR(tmpstr);
 				 break;
 				
@@ -737,6 +869,79 @@ private: System::Void FMR_SendApduBtn_Click(System::Object^  sender, System::Eve
 			 }
 		 }
 private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void InitTdaBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String^ ins_inittda1="FF1101050100";
+			 String^ ins_inittda2="FF19010001";
+			 String^ recestr;
+			 int ret;
+			 try
+			 {
+				 ret=reader.TransmitReader(ins_inittda1,recestr);
+				 if(ret) throw ret;
+				 if(recestr!="9000") throw ret;
+				 ret=reader.TransmitReader(ins_inittda2,recestr);
+				 if(recestr!="9000") throw ret;
+				 CTShow->Text="InitTDA Succeed!";
+			 }
+			 catch(...)
+			 {
+				CTShow->Text="InitTDA Failed!";
+			 }
+			
+		 }
+private: System::Void ColdResetBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			String^ ins_coldreset="FF19010101";
+			String^ recestr;
+			int ret;
+			try
+			{
+				if(CTVoltSelBox->SelectedIndex==0x00)
+					ins_coldreset+="01";
+				else if(CTVoltSelBox->SelectedIndex==0x02)
+					ins_coldreset+="03";
+				else 
+					ins_coldreset+="02";
+				ret=reader.TransmitReader(ins_coldreset,recestr);
+				if(ret) throw ret;
+				CTShow->Text=recestr;
+			}
+			catch(...)
+			{
+				CTShow->Text="ColdReset Failed!";
+			}
+
+		 }
+private: System::Void CTSentBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String ^ temp;
+			 int ret;
+			 try
+			 {
+				 ret=reader.TransmitReader(CtInput->Text,temp);
+				 if(ret) throw ret;
+				 CTShow->Text=temp;
+
+			 }
+			 catch(...)
+			 {
+				 CTShow->Text="Send Failed!"; 
+			 }
+		 }
+private: System::Void CTPpsBtn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String^ ins_pps="FFFF000101";
+			 String^ recestr;
+			 int ret;
+			 try
+			 {
+				 ins_pps+=CTPps1->Text;
+				 ret=reader.TransmitReader(ins_pps,recestr);
+				 if(ret) throw ret;
+				 CTShow->Text=recestr;
+			 }
+			 catch(...)
+			 {
+				 CTShow->Text="PPS Failed!";
+			 }
 		 }
 };
 }
