@@ -15,6 +15,7 @@ namespace VisualStudy
 		String^ Pras_CRC14443A(String^ crc14443a);
 		String^ Pras_CRC14443B(String^ crc14443b);
 		String^ Pras_ATR(String^ atr);
+
 	};
 	
 

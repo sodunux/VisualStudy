@@ -96,6 +96,8 @@ namespace VisualStudy {
 	private: System::Windows::Forms::Label^  P14443_Lab1;
 	private: System::Windows::Forms::Button^  P14443_Btn1;
 	private: System::Windows::Forms::TabControl^  tabcontrol;
+
+
 	private: System::Windows::Forms::TabControl^  tabControl1;
 	private: System::Windows::Forms::TabPage^  FMR_Tab1;
 	private: System::Windows::Forms::SplitContainer^  splitContainer3;
@@ -118,6 +120,73 @@ namespace VisualStudy {
 	private: System::Windows::Forms::Button^  CTSentBtn;
 	private: System::Windows::Forms::RichTextBox^  CtInput;
 	private: System::Windows::Forms::RichTextBox^  CTShow;
+private: System::Windows::Forms::TabPage^  FM413;
+private: System::Windows::Forms::TabControl^  P1443;
+private: System::Windows::Forms::TabPage^  P14443;
+private: System::Windows::Forms::TabPage^  P15693;
+private: System::Windows::Forms::TabPage^  Info;
+private: System::Windows::Forms::SplitContainer^  splitContainer6;
+private: System::Windows::Forms::DataGridView^  FM413_InfoData_View;
+
+private: System::Windows::Forms::Button^  FM413_ReadInfo_Btn;
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::Button^  FM413_GenInfo_Btn;
+private: System::Windows::Forms::Button^  FM413_WriteInfo_Btn;
+private: System::Windows::Forms::Button^  FM413_Parseinfo_Btn;
+private: System::Windows::Forms::Button^  FM413_OpenFile_Btn;
+private: System::Windows::Forms::OpenFileDialog^  OpenFiles;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Bytes;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Item;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Config;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Data;
+
+
+
+
+
+private: 
+
+public: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -248,6 +317,23 @@ namespace VisualStudy {
 			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
 			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
 			this->tabcontrol = (gcnew System::Windows::Forms::TabControl());
+			this->FM413 = (gcnew System::Windows::Forms::TabPage());
+			this->P1443 = (gcnew System::Windows::Forms::TabControl());
+			this->P14443 = (gcnew System::Windows::Forms::TabPage());
+			this->P15693 = (gcnew System::Windows::Forms::TabPage());
+			this->Info = (gcnew System::Windows::Forms::TabPage());
+			this->splitContainer6 = (gcnew System::Windows::Forms::SplitContainer());
+			this->FM413_InfoData_View = (gcnew System::Windows::Forms::DataGridView());
+			this->Bytes = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Item = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Config = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Data = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->FM413_OpenFile_Btn = (gcnew System::Windows::Forms::Button());
+			this->FM413_GenInfo_Btn = (gcnew System::Windows::Forms::Button());
+			this->FM413_WriteInfo_Btn = (gcnew System::Windows::Forms::Button());
+			this->FM413_Parseinfo_Btn = (gcnew System::Windows::Forms::Button());
+			this->FM413_ReadInfo_Btn = (gcnew System::Windows::Forms::Button());
+			this->OpenFiles = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->FMReader->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->FMR_Tab1->SuspendLayout();
@@ -278,6 +364,14 @@ namespace VisualStudy {
 			this->splitContainer1->Panel2->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
 			this->tabcontrol->SuspendLayout();
+			this->FM413->SuspendLayout();
+			this->P1443->SuspendLayout();
+			this->Info->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer6))->BeginInit();
+			this->splitContainer6->Panel1->SuspendLayout();
+			this->splitContainer6->Panel2->SuspendLayout();
+			this->splitContainer6->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->FM413_InfoData_View))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// serialport
@@ -646,9 +740,139 @@ namespace VisualStudy {
 			this->tabcontrol->Controls->Add(this->Calculate);
 			this->tabcontrol->Controls->Add(this->Endurance);
 			this->tabcontrol->Controls->Add(this->FMReader);
+			this->tabcontrol->Controls->Add(this->FM413);
 			resources->ApplyResources(this->tabcontrol, L"tabcontrol");
 			this->tabcontrol->Name = L"tabcontrol";
 			this->tabcontrol->SelectedIndex = 0;
+			// 
+			// FM413
+			// 
+			this->FM413->Controls->Add(this->P1443);
+			resources->ApplyResources(this->FM413, L"FM413");
+			this->FM413->Name = L"FM413";
+			this->FM413->UseVisualStyleBackColor = true;
+			// 
+			// P1443
+			// 
+			this->P1443->Controls->Add(this->P14443);
+			this->P1443->Controls->Add(this->P15693);
+			this->P1443->Controls->Add(this->Info);
+			resources->ApplyResources(this->P1443, L"P1443");
+			this->P1443->Name = L"P1443";
+			this->P1443->SelectedIndex = 0;
+			// 
+			// P14443
+			// 
+			resources->ApplyResources(this->P14443, L"P14443");
+			this->P14443->Name = L"P14443";
+			this->P14443->UseVisualStyleBackColor = true;
+			// 
+			// P15693
+			// 
+			resources->ApplyResources(this->P15693, L"P15693");
+			this->P15693->Name = L"P15693";
+			this->P15693->UseVisualStyleBackColor = true;
+			// 
+			// Info
+			// 
+			this->Info->Controls->Add(this->splitContainer6);
+			resources->ApplyResources(this->Info, L"Info");
+			this->Info->Name = L"Info";
+			this->Info->UseVisualStyleBackColor = true;
+			// 
+			// splitContainer6
+			// 
+			resources->ApplyResources(this->splitContainer6, L"splitContainer6");
+			this->splitContainer6->Name = L"splitContainer6";
+			// 
+			// splitContainer6.Panel1
+			// 
+			this->splitContainer6->Panel1->Controls->Add(this->FM413_InfoData_View);
+			// 
+			// splitContainer6.Panel2
+			// 
+			this->splitContainer6->Panel2->Controls->Add(this->FM413_OpenFile_Btn);
+			this->splitContainer6->Panel2->Controls->Add(this->FM413_GenInfo_Btn);
+			this->splitContainer6->Panel2->Controls->Add(this->FM413_WriteInfo_Btn);
+			this->splitContainer6->Panel2->Controls->Add(this->FM413_Parseinfo_Btn);
+			this->splitContainer6->Panel2->Controls->Add(this->FM413_ReadInfo_Btn);
+			// 
+			// FM413_InfoData_View
+			// 
+			this->FM413_InfoData_View->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->FM413_InfoData_View->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->FM413_InfoData_View->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {this->Bytes, 
+				this->Item, this->Config, this->Data});
+			resources->ApplyResources(this->FM413_InfoData_View, L"FM413_InfoData_View");
+			this->FM413_InfoData_View->Name = L"FM413_InfoData_View";
+			this->FM413_InfoData_View->RowTemplate->Height = 23;
+			this->FM413_InfoData_View->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView1_CellContentClick_1);
+			// 
+			// Bytes
+			// 
+			this->Bytes->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
+			this->Bytes->FillWeight = 62.93706F;
+			resources->ApplyResources(this->Bytes, L"Bytes");
+			this->Bytes->Name = L"Bytes";
+			// 
+			// Item
+			// 
+			this->Item->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
+			resources->ApplyResources(this->Item, L"Item");
+			this->Item->Name = L"Item";
+			// 
+			// Config
+			// 
+			this->Config->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Config->FillWeight = 118.5315F;
+			resources->ApplyResources(this->Config, L"Config");
+			this->Config->Name = L"Config";
+			this->Config->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->Config->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Data
+			// 
+			this->Data->FillWeight = 118.5315F;
+			resources->ApplyResources(this->Data, L"Data");
+			this->Data->Name = L"Data";
+			this->Data->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->Data->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// FM413_OpenFile_Btn
+			// 
+			resources->ApplyResources(this->FM413_OpenFile_Btn, L"FM413_OpenFile_Btn");
+			this->FM413_OpenFile_Btn->Name = L"FM413_OpenFile_Btn";
+			this->FM413_OpenFile_Btn->UseVisualStyleBackColor = true;
+			this->FM413_OpenFile_Btn->Click += gcnew System::EventHandler(this, &Form1::FM413_OpenFile_Btn_Click);
+			// 
+			// FM413_GenInfo_Btn
+			// 
+			resources->ApplyResources(this->FM413_GenInfo_Btn, L"FM413_GenInfo_Btn");
+			this->FM413_GenInfo_Btn->Name = L"FM413_GenInfo_Btn";
+			this->FM413_GenInfo_Btn->UseVisualStyleBackColor = true;
+			// 
+			// FM413_WriteInfo_Btn
+			// 
+			resources->ApplyResources(this->FM413_WriteInfo_Btn, L"FM413_WriteInfo_Btn");
+			this->FM413_WriteInfo_Btn->Name = L"FM413_WriteInfo_Btn";
+			this->FM413_WriteInfo_Btn->UseVisualStyleBackColor = true;
+			// 
+			// FM413_Parseinfo_Btn
+			// 
+			resources->ApplyResources(this->FM413_Parseinfo_Btn, L"FM413_Parseinfo_Btn");
+			this->FM413_Parseinfo_Btn->Name = L"FM413_Parseinfo_Btn";
+			this->FM413_Parseinfo_Btn->UseVisualStyleBackColor = true;
+			// 
+			// FM413_ReadInfo_Btn
+			// 
+			resources->ApplyResources(this->FM413_ReadInfo_Btn, L"FM413_ReadInfo_Btn");
+			this->FM413_ReadInfo_Btn->Name = L"FM413_ReadInfo_Btn";
+			this->FM413_ReadInfo_Btn->UseVisualStyleBackColor = true;
+			this->FM413_ReadInfo_Btn->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+			// 
+			// OpenFiles
+			// 
+			resources->ApplyResources(this->OpenFiles, L"OpenFiles");
 			// 
 			// Form1
 			// 
@@ -694,6 +918,14 @@ namespace VisualStudy {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
 			this->tabcontrol->ResumeLayout(false);
+			this->FM413->ResumeLayout(false);
+			this->P1443->ResumeLayout(false);
+			this->Info->ResumeLayout(false);
+			this->splitContainer6->Panel1->ResumeLayout(false);
+			this->splitContainer6->Panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer6))->EndInit();
+			this->splitContainer6->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->FM413_InfoData_View))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -942,6 +1174,19 @@ private: System::Void CTPpsBtn_Click(System::Object^  sender, System::EventArgs^
 			 {
 				 CTShow->Text="PPS Failed!";
 			 }
+		 }
+private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+		 }
+private: System::Void dataGridView1_CellContentClick_1(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+		 }
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void FM413_OpenFile_Btn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 //DataGridViewRow^ row;
+			
+			OpenFiles->ShowDialog();
+			//FM413_InfoData_View->Rows.Add(row);
+			
 		 }
 };
 }
