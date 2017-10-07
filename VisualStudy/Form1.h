@@ -11,6 +11,8 @@ namespace VisualStudy {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::IO::Ports;
+	using namespace System::IO;
+	using namespace System::Text;
 	//using namespace System.IO.Ports
 
 	/// <summary>
@@ -126,7 +128,9 @@ private: System::Windows::Forms::TabPage^  P14443;
 private: System::Windows::Forms::TabPage^  P15693;
 private: System::Windows::Forms::TabPage^  Info;
 private: System::Windows::Forms::SplitContainer^  splitContainer6;
-private: System::Windows::Forms::DataGridView^  FM413_InfoData_View;
+public: System::Windows::Forms::DataGridView^  FM413_InfoData_View;
+private: 
+
 
 private: System::Windows::Forms::Button^  FM413_ReadInfo_Btn;
 
@@ -144,10 +148,33 @@ private: System::Windows::Forms::Button^  FM413_WriteInfo_Btn;
 private: System::Windows::Forms::Button^  FM413_Parseinfo_Btn;
 private: System::Windows::Forms::Button^  FM413_OpenFile_Btn;
 private: System::Windows::Forms::OpenFileDialog^  OpenFiles;
+
+
+private: System::Windows::Forms::RichTextBox^  FM413_Text;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Bytes;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Item;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^  Config;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Items;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Data;
+private: System::Windows::Forms::DataGridViewComboBoxColumn^  Configs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -323,11 +350,12 @@ public:
 			this->P15693 = (gcnew System::Windows::Forms::TabPage());
 			this->Info = (gcnew System::Windows::Forms::TabPage());
 			this->splitContainer6 = (gcnew System::Windows::Forms::SplitContainer());
+			this->FM413_Text = (gcnew System::Windows::Forms::RichTextBox());
 			this->FM413_InfoData_View = (gcnew System::Windows::Forms::DataGridView());
 			this->Bytes = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Item = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Config = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Items = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Data = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Configs = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
 			this->FM413_OpenFile_Btn = (gcnew System::Windows::Forms::Button());
 			this->FM413_GenInfo_Btn = (gcnew System::Windows::Forms::Button());
 			this->FM413_WriteInfo_Btn = (gcnew System::Windows::Forms::Button());
@@ -772,6 +800,7 @@ public:
 			resources->ApplyResources(this->P15693, L"P15693");
 			this->P15693->Name = L"P15693";
 			this->P15693->UseVisualStyleBackColor = true;
+			this->P15693->Click += gcnew System::EventHandler(this, &Form1::P15693_Click);
 			// 
 			// Info
 			// 
@@ -779,6 +808,7 @@ public:
 			resources->ApplyResources(this->Info, L"Info");
 			this->Info->Name = L"Info";
 			this->Info->UseVisualStyleBackColor = true;
+			this->Info->Click += gcnew System::EventHandler(this, &Form1::Info_Click);
 			// 
 			// splitContainer6
 			// 
@@ -787,7 +817,9 @@ public:
 			// 
 			// splitContainer6.Panel1
 			// 
+			this->splitContainer6->Panel1->Controls->Add(this->FM413_Text);
 			this->splitContainer6->Panel1->Controls->Add(this->FM413_InfoData_View);
+			this->splitContainer6->Panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Form1::splitContainer6_Panel1_Paint);
 			// 
 			// splitContainer6.Panel2
 			// 
@@ -797,12 +829,17 @@ public:
 			this->splitContainer6->Panel2->Controls->Add(this->FM413_Parseinfo_Btn);
 			this->splitContainer6->Panel2->Controls->Add(this->FM413_ReadInfo_Btn);
 			// 
+			// FM413_Text
+			// 
+			resources->ApplyResources(this->FM413_Text, L"FM413_Text");
+			this->FM413_Text->Name = L"FM413_Text";
+			// 
 			// FM413_InfoData_View
 			// 
 			this->FM413_InfoData_View->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->FM413_InfoData_View->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->FM413_InfoData_View->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {this->Bytes, 
-				this->Item, this->Config, this->Data});
+				this->Items, this->Data, this->Configs});
 			resources->ApplyResources(this->FM413_InfoData_View, L"FM413_InfoData_View");
 			this->FM413_InfoData_View->Name = L"FM413_InfoData_View";
 			this->FM413_InfoData_View->RowTemplate->Height = 23;
@@ -810,33 +847,23 @@ public:
 			// 
 			// Bytes
 			// 
-			this->Bytes->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
-			this->Bytes->FillWeight = 62.93706F;
 			resources->ApplyResources(this->Bytes, L"Bytes");
 			this->Bytes->Name = L"Bytes";
 			// 
-			// Item
+			// Items
 			// 
-			this->Item->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
-			resources->ApplyResources(this->Item, L"Item");
-			this->Item->Name = L"Item";
-			// 
-			// Config
-			// 
-			this->Config->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Config->FillWeight = 118.5315F;
-			resources->ApplyResources(this->Config, L"Config");
-			this->Config->Name = L"Config";
-			this->Config->Resizable = System::Windows::Forms::DataGridViewTriState::True;
-			this->Config->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			resources->ApplyResources(this->Items, L"Items");
+			this->Items->Name = L"Items";
 			// 
 			// Data
 			// 
-			this->Data->FillWeight = 118.5315F;
 			resources->ApplyResources(this->Data, L"Data");
 			this->Data->Name = L"Data";
-			this->Data->Resizable = System::Windows::Forms::DataGridViewTriState::True;
-			this->Data->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Configs
+			// 
+			resources->ApplyResources(this->Configs, L"Configs");
+			this->Configs->Name = L"Configs";
 			// 
 			// FM413_OpenFile_Btn
 			// 
@@ -873,6 +900,7 @@ public:
 			// OpenFiles
 			// 
 			resources->ApplyResources(this->OpenFiles, L"OpenFiles");
+			this->OpenFiles->FileOk += gcnew System::ComponentModel::CancelEventHandler(this, &Form1::OpenFiles_FileOk);
 			// 
 			// Form1
 			// 
@@ -1182,10 +1210,88 @@ private: System::Void dataGridView1_CellContentClick_1(System::Object^  sender, 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void FM413_OpenFile_Btn_Click(System::Object^  sender, System::EventArgs^  e) {
-			 //DataGridViewRow^ row;
-			
+		try{
+			String ^ line;
+			array<String^>^lines;
+			File^ fp;
+			DataGridViewComboBoxCell^ cbox= gcnew DataGridViewComboBoxCell();
+			int i;
+			int index0,index1,index2,index3;
 			OpenFiles->ShowDialog();
-			//FM413_InfoData_View->Rows.Add(row);
+			lines=fp->ReadAllLines(OpenFiles->FileName,Encoding::Unicode);//Files must be Unicode
+			FM413_InfoData_View->Rows->Clear(); 
+			FM413_InfoData_View->Rows->Add(lines->Length);
+			for(i=0;i<lines->Length;i++)
+			{
+				line=lines[i]->Replace(" ","");
+				index0=line->IndexOf("#");
+				index1=line->IndexOf("#",index0+1);
+				index2=line->IndexOf("#",index1+1);
+				index3=line->IndexOf("#",index2+1);
+				FM413_InfoData_View->Rows[i]->Cells[0]->Value=line->Substring(index0+1,index1-index0-1);
+				FM413_InfoData_View->Rows[i]->Cells[1]->Value=line->Substring(index1+1,index2-index1-1);
+				FM413_InfoData_View->Rows[i]->Cells[2]->Value=line->Substring(index2+1,index3-index2-1);				
+				FM413_InfoData_View->Rows[i]->Cells[3]=CreateComboboxCells(CreateDataTable(line->Substring(index3+1),"config"),"config");
+
+			}
+			
+
+		}
+		catch(...){
+
+		}
+		}
+
+private:	DataTable^ CreateDataTable(String^ line,String ^col_name)
+			{
+				//check "@"
+				//@1@2@3@4
+				DataTable^ dt=gcnew DataTable();
+				int i,j;
+				dt->Columns->Add(col_name);
+				DataRow^dr=dt->NewRow();
+				i=line->IndexOf("@");
+				j=line->LastIndexOf("@");
+				if(i==j)
+				{
+					dr[0]=line->Substring(i+1);
+					dt->Rows->Add(dr);
+				}
+					
+				else
+				{
+					j=line->IndexOf("@",i+1);
+					while(i!=(line->LastIndexOf("@")))
+					{
+						dr=dt->NewRow();
+						dr[0]=line->Substring(i+1,j-i-1);
+						dt->Rows->Add(dr);
+						i=j;
+						j=line->IndexOf("@",i+1);
+					}
+					dr=dt->NewRow();
+					dr[0]=line->Substring(line->LastIndexOf("@")+1);
+					dt->Rows->Add(dr);
+				}
+				return dt;				
+			}
+private:	DataGridViewComboBoxCell^ CreateComboboxCells(DataTable^cdt,String^col_name)
+		 {
+			DataGridViewComboBoxCell^cbox=gcnew DataGridViewComboBoxCell();
+			cbox->DataSource=cdt;
+			cbox->DisplayMember=col_name;
+			cbox->ValueMember=col_name;
+			return cbox;	
+		 }
+
+
+private: System::Void OpenFiles_FileOk(System::Object^  sender, System::ComponentModel::CancelEventArgs^  e) {
+		 }
+private: System::Void P15693_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void splitContainer6_Panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void Info_Click(System::Object^  sender, System::EventArgs^  e) {
 			
 		 }
 };

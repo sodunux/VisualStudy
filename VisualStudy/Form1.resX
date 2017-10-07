@@ -1614,35 +1614,56 @@
   <data name="splitContainer6.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
+  <data name="FM413_Text.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="FM413_Text.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 381</value>
+  </data>
+  <data name="FM413_Text.Size" type="System.Drawing.Size, System.Drawing">
+    <value>486, 32</value>
+  </data>
+  <data name="FM413_Text.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="FM413_Text.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;FM413_Text.Name" xml:space="preserve">
+    <value>FM413_Text</value>
+  </data>
+  <data name="&gt;&gt;FM413_Text.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FM413_Text.Parent" xml:space="preserve">
+    <value>splitContainer6.Panel1</value>
+  </data>
+  <data name="&gt;&gt;FM413_Text.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="Bytes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Bytes.HeaderText" xml:space="preserve">
     <value>Bytes</value>
   </data>
-  <data name="Bytes.Width" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <metadata name="Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Items.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Item.HeaderText" xml:space="preserve">
-    <value>Item</value>
-  </data>
-  <data name="Item.Width" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <metadata name="Config.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Config.HeaderText" xml:space="preserve">
-    <value>Config</value>
+  <data name="Items.HeaderText" xml:space="preserve">
+    <value>Items</value>
   </data>
   <metadata name="Data.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Data.HeaderText" xml:space="preserve">
     <value>Data</value>
+  </data>
+  <metadata name="Configs.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Configs.HeaderText" xml:space="preserve">
+    <value>Configs</value>
   </data>
   <data name="FM413_InfoData_View.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1666,7 +1687,7 @@
     <value>splitContainer6.Panel1</value>
   </data>
   <data name="&gt;&gt;FM413_InfoData_View.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;splitContainer6.Panel1.Name" xml:space="preserve">
     <value>splitContainer6.Panel1</value>
@@ -2364,16 +2385,10 @@
   <data name="&gt;&gt;Bytes.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Item.Name" xml:space="preserve">
-    <value>Item</value>
+  <data name="&gt;&gt;Items.Name" xml:space="preserve">
+    <value>Items</value>
   </data>
-  <data name="&gt;&gt;Item.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Config.Name" xml:space="preserve">
-    <value>Config</value>
-  </data>
-  <data name="&gt;&gt;Config.Type" xml:space="preserve">
+  <data name="&gt;&gt;Items.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Data.Name" xml:space="preserve">
@@ -2381,6 +2396,12 @@
   </data>
   <data name="&gt;&gt;Data.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Configs.Name" xml:space="preserve">
+    <value>Configs</value>
+  </data>
+  <data name="&gt;&gt;Configs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewComboBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;OpenFiles.Name" xml:space="preserve">
     <value>OpenFiles</value>
