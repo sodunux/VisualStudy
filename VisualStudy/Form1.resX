@@ -135,7 +135,7 @@
     <value>0, 0</value>
   </data>
   <data name="FMR_input.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 142</value>
+    <value>320, 142</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FMR_input.TabIndex" type="System.Int32, mscorlib">
@@ -178,7 +178,7 @@
     <value>0, 0</value>
   </data>
   <data name="FMR_Show.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 142</value>
+    <value>351, 142</value>
   </data>
   <data name="FMR_Show.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -208,10 +208,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 142</value>
+    <value>675, 142</value>
   </data>
   <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>284</value>
+    <value>320</value>
   </data>
   <data name="splitContainer3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -235,10 +235,10 @@
     <value>NoControl</value>
   </data>
   <data name="FMR_SendApduBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 367</value>
+    <value>3, 363</value>
   </data>
   <data name="FMR_SendApduBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 49</value>
+    <value>675, 49</value>
   </data>
   <data name="FMR_SendApduBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -277,7 +277,7 @@
     <value>0, 0</value>
   </data>
   <data name="FMR_GetReaderBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 34</value>
+    <value>315, 34</value>
   </data>
   <data name="FMR_GetReaderBtn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -322,7 +322,7 @@
     <value>0, 0</value>
   </data>
   <data name="FMR_ConnectBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 34</value>
+    <value>356, 34</value>
   </data>
   <data name="FMR_ConnectBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -355,10 +355,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 34</value>
+    <value>675, 34</value>
   </data>
   <data name="splitContainer4.SplitterDistance" type="System.Int32, mscorlib">
-    <value>280</value>
+    <value>315</value>
   </data>
   <data name="splitContainer4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -382,7 +382,7 @@
     <value>0, 0</value>
   </data>
   <data name="FMReader_NameBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 25</value>
+    <value>675, 25</value>
   </data>
   <data name="FMReader_NameBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -406,7 +406,7 @@
     <value>3, 3</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 59</value>
+    <value>675, 59</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -430,7 +430,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="FMR_Tab1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 419</value>
+    <value>681, 415</value>
   </data>
   <data name="FMR_Tab1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -454,7 +454,7 @@
     <value>Bottom</value>
   </data>
   <data name="splitContainer5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 320</value>
+    <value>3, 316</value>
   </data>
   <data name="CtInput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -463,7 +463,7 @@
     <value>0, 0</value>
   </data>
   <data name="CtInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 100</value>
+    <value>322, 100</value>
   </data>
   <data name="CtInput.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -502,7 +502,7 @@
     <value>0, 0</value>
   </data>
   <data name="CTShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 100</value>
+    <value>349, 100</value>
   </data>
   <data name="CTShow.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -535,10 +535,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 100</value>
+    <value>675, 100</value>
   </data>
   <data name="splitContainer5.SplitterDistance" type="System.Int32, mscorlib">
-    <value>286</value>
+    <value>322</value>
   </data>
   <data name="splitContainer5.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -751,7 +751,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 423</value>
+    <value>681, 419</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -778,7 +778,7 @@
     <value>3, 3</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>613, 449</value>
+    <value>689, 445</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -802,7 +802,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="FMReader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 455</value>
+    <value>695, 451</value>
   </data>
   <data name="FMReader.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1276,7 +1276,7 @@
     <value>4, 26</value>
   </data>
   <data name="Endurance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 455</value>
+    <value>695, 451</value>
   </data>
   <data name="Endurance.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1309,7 +1309,7 @@
     <value>0, 0</value>
   </data>
   <data name="P14443_Text1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 386</value>
+    <value>309, 382</value>
   </data>
   <data name="P14443_Text1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1357,7 +1357,7 @@
     <value>23</value>
   </data>
   <data name="shapeContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 386</value>
+    <value>309, 382</value>
   </data>
   <data name="shapeContainer2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1408,10 +1408,10 @@
     <value>ATR</value>
   </data>
   <data name="P14443_Cbox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 361</value>
+    <value>0, 357</value>
   </data>
   <data name="P14443_Cbox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 25</value>
+    <value>376, 25</value>
   </data>
   <data name="P14443_Cbox1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1441,7 +1441,7 @@
     <value>0, 0</value>
   </data>
   <data name="P14443_Lab1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 386</value>
+    <value>376, 382</value>
   </data>
   <data name="P14443_Lab1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1471,10 +1471,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>613, 386</value>
+    <value>689, 382</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>275</value>
+    <value>309</value>
   </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1501,13 +1501,13 @@
     <value>NoControl</value>
   </data>
   <data name="P14443_Btn1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 389</value>
+    <value>3, 385</value>
   </data>
   <data name="P14443_Btn1.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 60</value>
   </data>
   <data name="P14443_Btn1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>613, 63</value>
+    <value>689, 63</value>
   </data>
   <data name="P14443_Btn1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1534,7 +1534,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="Calculate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 455</value>
+    <value>695, 451</value>
   </data>
   <data name="Calculate.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1561,7 +1561,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="P14443.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 419</value>
+    <value>681, 415</value>
   </data>
   <data name="P14443.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1588,7 +1588,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="P15693.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 423</value>
+    <value>681, 419</value>
   </data>
   <data name="P15693.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1618,10 +1618,13 @@
     <value>Bottom</value>
   </data>
   <data name="FM413_Text.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 381</value>
+    <value>0, 377</value>
+  </data>
+  <data name="FM413_Text.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="FM413_Text.Size" type="System.Drawing.Size, System.Drawing">
-    <value>486, 32</value>
+    <value>597, 32</value>
   </data>
   <data name="FM413_Text.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1641,11 +1644,32 @@
   <data name="&gt;&gt;FM413_Text.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="Page.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Page.HeaderText" xml:space="preserve">
+    <value>Pg</value>
+  </data>
+  <data name="Page.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
   <metadata name="Bytes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Bytes.HeaderText" xml:space="preserve">
     <value>Bytes</value>
+  </data>
+  <data name="Bytes.Width" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <metadata name="Bits.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Bits.HeaderText" xml:space="preserve">
+    <value>Bits</value>
+  </data>
+  <data name="Bits.Width" type="System.Int32, mscorlib">
+    <value>54</value>
   </data>
   <metadata name="Items.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1653,11 +1677,17 @@
   <data name="Items.HeaderText" xml:space="preserve">
     <value>Items</value>
   </data>
+  <data name="Items.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
   <metadata name="Data.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Data.HeaderText" xml:space="preserve">
     <value>Data</value>
+  </data>
+  <data name="Data.Width" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <metadata name="Configs.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1672,7 +1702,7 @@
     <value>0, 0</value>
   </data>
   <data name="FM413_InfoData_View.Size" type="System.Drawing.Size, System.Drawing">
-    <value>486, 413</value>
+    <value>597, 409</value>
   </data>
   <data name="FM413_InfoData_View.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1705,10 +1735,10 @@
     <value>Bottom</value>
   </data>
   <data name="FM413_OpenFile_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 390</value>
+    <value>0, 386</value>
   </data>
   <data name="FM413_OpenFile_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 23</value>
+    <value>74, 23</value>
   </data>
   <data name="FM413_OpenFile_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1738,7 +1768,7 @@
     <value>0, 69</value>
   </data>
   <data name="FM413_GenInfo_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 23</value>
+    <value>74, 23</value>
   </data>
   <data name="FM413_GenInfo_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1765,7 +1795,7 @@
     <value>0, 46</value>
   </data>
   <data name="FM413_WriteInfo_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 23</value>
+    <value>74, 23</value>
   </data>
   <data name="FM413_WriteInfo_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1792,7 +1822,7 @@
     <value>0, 23</value>
   </data>
   <data name="FM413_Parseinfo_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 23</value>
+    <value>74, 23</value>
   </data>
   <data name="FM413_Parseinfo_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1822,7 +1852,7 @@
     <value>0, 0</value>
   </data>
   <data name="FM413_ReadInfo_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 23</value>
+    <value>74, 23</value>
   </data>
   <data name="FM413_ReadInfo_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1855,10 +1885,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 413</value>
+    <value>675, 409</value>
   </data>
   <data name="splitContainer6.SplitterDistance" type="System.Int32, mscorlib">
-    <value>486</value>
+    <value>597</value>
   </data>
   <data name="splitContainer6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1882,7 +1912,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="Info.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 419</value>
+    <value>681, 415</value>
   </data>
   <data name="Info.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1909,7 +1939,7 @@
     <value>3, 3</value>
   </data>
   <data name="P1443.Size" type="System.Drawing.Size, System.Drawing">
-    <value>613, 449</value>
+    <value>689, 445</value>
   </data>
   <data name="P1443.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1933,7 +1963,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="FM413.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 455</value>
+    <value>695, 451</value>
   </data>
   <data name="FM413.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1960,7 +1990,7 @@
     <value>0, 0</value>
   </data>
   <data name="tabcontrol.Size" type="System.Drawing.Size, System.Drawing">
-    <value>627, 485</value>
+    <value>703, 481</value>
   </data>
   <data name="tabcontrol.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1990,7 +2020,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>627, 485</value>
+    <value>703, 481</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
@@ -2379,10 +2409,22 @@
   <data name="&gt;&gt;lineShape2.Type" xml:space="preserve">
     <value>Microsoft.VisualBasic.PowerPacks.LineShape, Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="&gt;&gt;Page.Name" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="&gt;&gt;Page.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Bytes.Name" xml:space="preserve">
     <value>Bytes</value>
   </data>
   <data name="&gt;&gt;Bytes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Bits.Name" xml:space="preserve">
+    <value>Bits</value>
+  </data>
+  <data name="&gt;&gt;Bits.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Items.Name" xml:space="preserve">

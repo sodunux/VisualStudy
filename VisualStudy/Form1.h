@@ -151,10 +151,65 @@ private: System::Windows::Forms::OpenFileDialog^  OpenFiles;
 
 
 private: System::Windows::Forms::RichTextBox^  FM413_Text;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Page;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Bytes;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  Bits;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Items;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  Data;
 private: System::Windows::Forms::DataGridViewComboBoxColumn^  Configs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -352,7 +407,9 @@ public:
 			this->splitContainer6 = (gcnew System::Windows::Forms::SplitContainer());
 			this->FM413_Text = (gcnew System::Windows::Forms::RichTextBox());
 			this->FM413_InfoData_View = (gcnew System::Windows::Forms::DataGridView());
+			this->Page = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Bytes = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Bits = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Items = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Data = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Configs = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
@@ -833,35 +890,52 @@ public:
 			// 
 			resources->ApplyResources(this->FM413_Text, L"FM413_Text");
 			this->FM413_Text->Name = L"FM413_Text";
+			this->FM413_Text->TextChanged += gcnew System::EventHandler(this, &Form1::FM413_Text_TextChanged);
 			// 
 			// FM413_InfoData_View
 			// 
 			this->FM413_InfoData_View->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->FM413_InfoData_View->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->FM413_InfoData_View->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {this->Bytes, 
-				this->Items, this->Data, this->Configs});
+			this->FM413_InfoData_View->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {this->Page, 
+				this->Bytes, this->Bits, this->Items, this->Data, this->Configs});
 			resources->ApplyResources(this->FM413_InfoData_View, L"FM413_InfoData_View");
 			this->FM413_InfoData_View->Name = L"FM413_InfoData_View";
 			this->FM413_InfoData_View->RowTemplate->Height = 23;
 			this->FM413_InfoData_View->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView1_CellContentClick_1);
 			// 
+			// Page
+			// 
+			this->Page->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::None;
+			resources->ApplyResources(this->Page, L"Page");
+			this->Page->Name = L"Page";
+			// 
 			// Bytes
 			// 
+			this->Bytes->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
 			resources->ApplyResources(this->Bytes, L"Bytes");
 			this->Bytes->Name = L"Bytes";
 			// 
+			// Bits
+			// 
+			this->Bits->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
+			resources->ApplyResources(this->Bits, L"Bits");
+			this->Bits->Name = L"Bits";
+			// 
 			// Items
 			// 
+			this->Items->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
 			resources->ApplyResources(this->Items, L"Items");
 			this->Items->Name = L"Items";
 			// 
 			// Data
 			// 
+			this->Data->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
 			resources->ApplyResources(this->Data, L"Data");
 			this->Data->Name = L"Data";
 			// 
 			// Configs
 			// 
+			this->Configs->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
 			resources->ApplyResources(this->Configs, L"Configs");
 			this->Configs->Name = L"Configs";
 			// 
@@ -1215,24 +1289,33 @@ private: System::Void FM413_OpenFile_Btn_Click(System::Object^  sender, System::
 			array<String^>^lines;
 			File^ fp;
 			DataGridViewComboBoxCell^ cbox= gcnew DataGridViewComboBoxCell();
-			int i;
-			int index0,index1,index2,index3;
+			int i,row_cnt;
+			int index0,index1,index2,index3,index4,index5;
 			OpenFiles->ShowDialog();
 			lines=fp->ReadAllLines(OpenFiles->FileName,Encoding::Unicode);//Files must be Unicode
 			FM413_InfoData_View->Rows->Clear(); 
-			FM413_InfoData_View->Rows->Add(lines->Length);
+			//FM413_InfoData_View->Rows->Add(lines->Length);
+			row_cnt=0;
 			for(i=0;i<lines->Length;i++)
 			{
 				line=lines[i]->Replace(" ","");
+				if(line->IndexOf("#"))
+					continue;
+				FM413_InfoData_View->Rows->Add(1);
+				
 				index0=line->IndexOf("#");
 				index1=line->IndexOf("#",index0+1);
 				index2=line->IndexOf("#",index1+1);
 				index3=line->IndexOf("#",index2+1);
-				FM413_InfoData_View->Rows[i]->Cells[0]->Value=line->Substring(index0+1,index1-index0-1);
-				FM413_InfoData_View->Rows[i]->Cells[1]->Value=line->Substring(index1+1,index2-index1-1);
-				FM413_InfoData_View->Rows[i]->Cells[2]->Value=line->Substring(index2+1,index3-index2-1);				
-				FM413_InfoData_View->Rows[i]->Cells[3]=CreateComboboxCells(CreateDataTable(line->Substring(index3+1),"config"),"config");
-
+				index4=line->IndexOf("#",index3+1);
+				index5=line->IndexOf("#",index4+1);
+				FM413_InfoData_View->Rows[row_cnt]->Cells[0]->Value=line->Substring(index0+1,index1-index0-1);
+				FM413_InfoData_View->Rows[row_cnt]->Cells[1]->Value=line->Substring(index1+1,index2-index1-1);
+				FM413_InfoData_View->Rows[row_cnt]->Cells[2]->Value=line->Substring(index2+1,index3-index2-1);				
+				FM413_InfoData_View->Rows[row_cnt]->Cells[3]->Value=line->Substring(index3+1,index4-index3-1);
+				FM413_InfoData_View->Rows[row_cnt]->Cells[4]->Value=line->Substring(index4+1,index5-index4-1);
+				FM413_InfoData_View->Rows[row_cnt]->Cells[5]=CreateComboboxCells(CreateDataTable(line->Substring(index5+1),"config"),"config");
+				row_cnt++;
 			}
 			
 
@@ -1281,6 +1364,7 @@ private:	DataGridViewComboBoxCell^ CreateComboboxCells(DataTable^cdt,String^col_
 			cbox->DataSource=cdt;
 			cbox->DisplayMember=col_name;
 			cbox->ValueMember=col_name;
+			cbox->Value=cdt->Rows[0]->ItemArray[0];
 			return cbox;	
 		 }
 
@@ -1293,6 +1377,8 @@ private: System::Void splitContainer6_Panel1_Paint(System::Object^  sender, Syst
 		 }
 private: System::Void Info_Click(System::Object^  sender, System::EventArgs^  e) {
 			
+		 }
+private: System::Void FM413_Text_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 		 }
 };
 }
