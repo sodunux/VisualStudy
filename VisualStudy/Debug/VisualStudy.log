@@ -1,4 +1,4 @@
-﻿生成启动时间为 2017/10/9 16:54:51。
+﻿生成启动时间为 2018/1/5 15:51:09。
      1>项目“C:\Users\a\Documents\GitHub\VisualStudy\VisualStudy\VisualStudy.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\VisualStudy.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -8,9 +8,9 @@
          所有输出均为最新。
          C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\VisualStudy.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.DirectoryServices.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt VisualStudy.cpp /clr:nostdlib 
          VisualStudy.cpp
-     1>c:\users\a\documents\github\visualstudy\visualstudy\Form1.h(1090): warning C4101: “tmpstr”: 未引用的局部变量
-     1>c:\users\a\documents\github\visualstudy\visualstudy\Form1.h(1159): warning C4101: “temp”: 未引用的局部变量
-     1>c:\users\a\documents\github\visualstudy\visualstudy\Form1.h(1290): warning C4101: “fp”: 未引用的局部变量
+     1>c:\users\a\documents\github\visualstudy\visualstudy\Form1.h(1456): warning C4101: “temp”: 未引用的局部变量
+     1>c:\users\a\documents\github\visualstudy\visualstudy\Form1.h(1584): warning C4101: “fp”: 未引用的局部变量
+     1>c:\users\a\documents\github\visualstudy\visualstudy\Form1.h(1582): warning C4101: “tmpstr”: 未引用的局部变量
          所有输出均为最新。
        CoreResGen:
          没有相对于源文件而言已过期的资源。正在跳过资源生成操作。
@@ -41,4 +41,4 @@
 
 生成成功。
 
-已用时间 00:00:01.43
+已用时间 00:00:01.89

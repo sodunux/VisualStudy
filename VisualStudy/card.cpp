@@ -123,6 +123,7 @@ int card::TransmitReader(String^sendstr,String^ &recstr)
 	int returnvalue;
 	DWORD ret,i;
 	String ^temp;
+	String ^sendstr_temp;
 	Byte sendbuff[1024],recebuff[1024];
 	DWORD sendlen=1024,recelen=1024;
 	SCARD_IO_REQUEST g_rgSCardT1Pci;
@@ -131,13 +132,14 @@ int card::TransmitReader(String^sendstr,String^ &recstr)
 
 	try
 	{
-		if(sendstr->Length%2) throw ret;
+		sendstr_temp=sendstr->Replace(" ","");
+		if(sendstr_temp->Length%2) throw ret;
 
-		for(i=0;i<(sendstr->Length/2);i++)
+		for(i=0;i<(sendstr_temp->Length/2);i++)
 		{
-			sendbuff[i]=Convert::ToByte(sendstr->Substring(i*2,2),16);
+			sendbuff[i]=Convert::ToByte(sendstr_temp->Substring(i*2,2),16);
 		}
-		sendlen=sendstr->Length/2;
+		sendlen=sendstr_temp->Length/2;
 		
 
 		ret=SCardBeginTransaction(hCardHandle); 

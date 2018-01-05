@@ -60,6 +60,9 @@ String^ Cal::Pras_ATQA(String^ atqa)
 	}
 	return temp;
 }
+
+
+
 String^ Cal::Pras_SAK(String^ sak)
 {
 	String ^temp;
