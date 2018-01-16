@@ -502,6 +502,11 @@ public:
 			this->splitContainer6 = (gcnew System::Windows::Forms::SplitContainer());
 			this->FM413_Text = (gcnew System::Windows::Forms::RichTextBox());
 			this->FM413_InfoData_View = (gcnew System::Windows::Forms::DataGridView());
+			this->Pg = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Bytes = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Items = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Configs = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
+			this->Data = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->infochk5 = (gcnew System::Windows::Forms::CheckBox());
 			this->infochk4 = (gcnew System::Windows::Forms::CheckBox());
@@ -563,11 +568,6 @@ public:
 			this->P14443_Lab1 = (gcnew System::Windows::Forms::Label());
 			this->P14443_Btn1 = (gcnew System::Windows::Forms::Button());
 			this->tabcontrol = (gcnew System::Windows::Forms::TabControl());
-			this->Pg = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Bytes = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Items = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Configs = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
-			this->Data = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->TestPage->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->splitContainer7))->BeginInit();
 			this->splitContainer7->Panel1->SuspendLayout();
@@ -764,7 +764,39 @@ public:
 			resources->ApplyResources(this->FM413_InfoData_View, L"FM413_InfoData_View");
 			this->FM413_InfoData_View->Name = L"FM413_InfoData_View";
 			this->FM413_InfoData_View->RowTemplate->Height = 23;
-			this->FM413_InfoData_View->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::FM413_InfoData_View_CellContentClick);
+			this->FM413_InfoData_View->CurrentCellDirtyStateChanged += gcnew System::EventHandler(this, &Form1::FM413_InfoData_View_CurrentCellDirtyStateChanged);
+			// 
+			// Pg
+			// 
+			this->Pg->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
+			this->Pg->FillWeight = 156.5217F;
+			resources->ApplyResources(this->Pg, L"Pg");
+			this->Pg->Name = L"Pg";
+			// 
+			// Bytes
+			// 
+			this->Bytes->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
+			resources->ApplyResources(this->Bytes, L"Bytes");
+			this->Bytes->Name = L"Bytes";
+			// 
+			// Items
+			// 
+			this->Items->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
+			resources->ApplyResources(this->Items, L"Items");
+			this->Items->Name = L"Items";
+			// 
+			// Configs
+			// 
+			this->Configs->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Configs->FillWeight = 43.47826F;
+			resources->ApplyResources(this->Configs, L"Configs");
+			this->Configs->Name = L"Configs";
+			// 
+			// Data
+			// 
+			this->Data->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
+			resources->ApplyResources(this->Data, L"Data");
+			this->Data->Name = L"Data";
 			// 
 			// panel3
 			// 
@@ -825,6 +857,7 @@ public:
 			resources->ApplyResources(this->FM413_GenInfo_Btn, L"FM413_GenInfo_Btn");
 			this->FM413_GenInfo_Btn->Name = L"FM413_GenInfo_Btn";
 			this->FM413_GenInfo_Btn->UseVisualStyleBackColor = true;
+			this->FM413_GenInfo_Btn->Click += gcnew System::EventHandler(this, &Form1::FM413_GenInfo_Btn_Click);
 			// 
 			// FM413_WriteInfo_Btn
 			// 
@@ -838,6 +871,7 @@ public:
 			resources->ApplyResources(this->FM413_Parseinfo_Btn, L"FM413_Parseinfo_Btn");
 			this->FM413_Parseinfo_Btn->Name = L"FM413_Parseinfo_Btn";
 			this->FM413_Parseinfo_Btn->UseVisualStyleBackColor = true;
+			this->FM413_Parseinfo_Btn->Click += gcnew System::EventHandler(this, &Form1::FM413_Parseinfo_Btn_Click);
 			// 
 			// FM413_ReadInfo_Btn
 			// 
@@ -1228,38 +1262,6 @@ public:
 			this->tabcontrol->Name = L"tabcontrol";
 			this->tabcontrol->SelectedIndex = 0;
 			// 
-			// Pg
-			// 
-			this->Pg->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
-			this->Pg->FillWeight = 156.5217F;
-			resources->ApplyResources(this->Pg, L"Pg");
-			this->Pg->Name = L"Pg";
-			// 
-			// Bytes
-			// 
-			this->Bytes->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
-			resources->ApplyResources(this->Bytes, L"Bytes");
-			this->Bytes->Name = L"Bytes";
-			// 
-			// Items
-			// 
-			this->Items->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
-			resources->ApplyResources(this->Items, L"Items");
-			this->Items->Name = L"Items";
-			// 
-			// Configs
-			// 
-			this->Configs->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Configs->FillWeight = 43.47826F;
-			resources->ApplyResources(this->Configs, L"Configs");
-			this->Configs->Name = L"Configs";
-			// 
-			// Data
-			// 
-			this->Data->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::DisplayedCells;
-			resources->ApplyResources(this->Data, L"Data");
-			this->Data->Name = L"Data";
-			// 
 			// Form1
 			// 
 			this->AllowDrop = true;
@@ -1580,80 +1582,95 @@ private: System::Void FM413_OpenFile_Btn_Click(System::Object^  sender, System::
 		try{
 			String ^ line;
 			String ^ tmpstr;
+			String ^ CfgStr;
+			String ^ DataStr;
 			array<String^>^lines;
 			File^ fp;
 			DataGridViewComboBoxCell^ cbox= gcnew DataGridViewComboBoxCell();
-			int i,row_cnt;
+			int i,j,row_cnt;
+			int icnt,jcnt;
 			int index0,index1,index2,index3;
 			OpenFiles->ShowDialog();
 			lines=fp->ReadAllLines(OpenFiles->FileName,Encoding::Unicode);//Files must be Unicode
 			FM413_InfoData_View->Rows->Clear(); 
 			FM413_Text->Text="";
-			//FM413_InfoData_View->Rows->Add(lines->Length);
 			row_cnt=0;
 			for(i=0;i<lines->Length;i++)
 			{
-				if(line->IndexOf("#"))
-					continue;
-				line=lines[i]->Replace(" ","");
-				line=line->Replace("	","");
-				FM413_InfoData_View->Rows->Add(1);
-				index0=line->IndexOf("#");
-				index1=line->IndexOf("#",index0+1);
-				index2=line->IndexOf("#",index1+1);
-				index3=line->IndexOf("#",index2+1);
-
-				FM413_InfoData_View->Rows[row_cnt]->Cells[0]->Value=line->Substring(index0+1,index1-index0-1);
-				FM413_InfoData_View->Rows[row_cnt]->Cells[1]->Value=line->Substring(index1+1,index2-index1-1);
-				FM413_InfoData_View->Rows[row_cnt]->Cells[2]->Value=line->Substring(index2+1,index3-index2-1);				
-
-				
-						
-				
-				row_cnt++;
-			}
-
-			//tmpstr="";
-			//FM413_InfoData_View->Rows->Add(lines->Length);
-/*			row_cnt=0;
-			for(i=0;i<lines->Length;i++)
-			{
 				line=lines[i]->Replace(" ","");
 				line=line->Replace("	","");
 				if(line->IndexOf("#"))
 					continue;
 				FM413_InfoData_View->Rows->Add(1);
-
 				index0=line->IndexOf("#");
 				index1=line->IndexOf("#",index0+1);
 				index2=line->IndexOf("#",index1+1);
 				index3=line->IndexOf("#",index2+1);
-				index4=line->IndexOf("#",index3+1);
-				index5=line->IndexOf("#",index4+1);
+				tmpstr=line->Substring(index3+1);
+				//DataStr=line->Substring(index3+1);
+				//@55$test_mode	@A5$user_mode @55$org_mode
 				FM413_InfoData_View->Rows[row_cnt]->Cells[0]->Value=line->Substring(index0+1,index1-index0-1);
-				FM413_InfoData_View->Rows[row_cnt]->Cells[1]->Value=line->Substring(index1+1,index2-index1-1);
+				FM413_InfoData_View->Rows[row_cnt]->Cells[1]->Value=line->Substring(index1+1,index2-index1-1)->ToLower();
 				FM413_InfoData_View->Rows[row_cnt]->Cells[2]->Value=line->Substring(index2+1,index3-index2-1);				
-				FM413_InfoData_View->Rows[row_cnt]->Cells[3]->Value=line->Substring(index3+1,index4-index3-1);
-				FM413_InfoData_View->Rows[row_cnt]->Cells[4]->Value=line->Substring(index4+1,index5-index4-1);
-				FM413_InfoData_View->Rows[row_cnt]->Cells[5]=CreateComboboxCells(CreateDataTable(line->Substring(index5+1),"config"),"config");
-				tmpstr=tmpstr+(line->Substring(index4+1,index5-index4-1));				
+				//DataGridViewComboBoxCell ^cbox
+				FM413_InfoData_View->Rows[row_cnt]->Cells[3]=GenCbox(tmpstr);
+				FM413_InfoData_View->Rows[row_cnt]->Cells[4]->Value=FM413_InfoData_View->Rows[row_cnt]->Cells[3]->Value->ToString()->Substring(0,2)->ToUpper();				
 				row_cnt++;
-			}
-			FM413_Text->Text=tmpstr;
-			for(i=0;i<(tmpstr->Length/16);i++)
-			{
-				P14443_Text1->Text+=tmpstr->Substring(i*16,16);
-				P14443_Text1->Text+="\n";
-			}
-				P14443_Text1->Text+=tmpstr->Substring(i*16,((tmpstr->Length/16)-16*i));
-
-	*/		
-
+			}	
 		}
 		catch(...){
 
 		}
 		}
+
+private: DataGridViewComboBoxCell ^GenCbox(String^tStr)
+		 {
+			 int icnt;
+			 int i,j;
+			 int index0,index1;
+			 DataGridViewComboBoxCell^cbox=gcnew DataGridViewComboBoxCell;
+
+			 try
+			 {
+
+				 tStr=tStr->Replace(" ","");
+				 tStr=tStr->Replace("	","");
+				 icnt=tStr->Length - tStr->Replace("@","")->Length;
+				 if(icnt==0)
+					 cbox->Items->Add("--");
+					
+				 else if(icnt==1)
+				 {
+					 index0=tStr->IndexOf("@");
+					 cbox->Items->Add(tStr->Substring(index0+1));
+				 }
+				 else
+				 {
+					 index0=tStr->IndexOf("@");
+					 index1=tStr->IndexOf("@",index0+1);
+					 for(i=1;i<icnt;i++)
+					 {
+						 cbox->Items->Add(tStr->Substring(index0+1,index1-index0-1));
+						 index0=index1;
+						 index1=tStr->IndexOf("@",index0+1);
+					 }
+					 cbox->Items->Add(tStr->Substring(index0+1));
+					 
+				 }
+				 cbox->Value=cbox->Items[0];
+				 return cbox;
+			 }
+			 catch(...)
+			 {
+				cbox->Items->Clear();
+				cbox->Items->Add("GenBox Error");
+				cbox->Value=cbox->Items[0];
+				return cbox;
+			 }
+
+				
+		
+		 }
 
 //private:	DataTable^ CreateDataTable(String^ line,String ^col_name)
 //			{
@@ -1738,7 +1755,48 @@ private: System::Void TestBtn1_Click(System::Object^  sender, System::EventArgs^
 
 
 		 }
-private: System::Void FM413_InfoData_View_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+
+
+private: System::Void FM413_InfoData_View_CurrentCellDirtyStateChanged(System::Object^  sender, System::EventArgs^  e) {
+			 try
+			 {
+				 DataGridViewDataErrorContexts context;
+				 FM413_InfoData_View->CommitEdit(context);
+				 FM413_InfoData_View->CurrentRow->Cells[4]->Value=FM413_InfoData_View->CurrentRow->Cells[3]->Value->ToString()->Substring(0,2)->ToUpper();
+			 }
+			 catch(...)
+			 {
+				 
+			 }
+		 
+		 }
+private: System::Void FM413_GenInfo_Btn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 try
+			 {
+				 String ^ infoStr;
+				 int i;
+				 infoStr="";
+				 for(i=0;i<FM413_InfoData_View->RowCount;i++)
+				 {
+					infoStr+=FM413_InfoData_View->Rows[i]->Cells[4]->Value;
+				 }
+				 FM413_Text->Text=infoStr;
+			 }
+			 catch(...)
+			 {
+				
+			 }
+		 }
+private: System::Void FM413_Parseinfo_Btn_Click(System::Object^  sender, System::EventArgs^  e) {
+			 try
+			 {
+
+				 
+			 }
+			 catch(...)
+			 {
+
+			 }
 		 }
 };
 }
