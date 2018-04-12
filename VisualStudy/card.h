@@ -14,7 +14,6 @@ namespace VisualStudy
 		int TransmitReader(String^sendstr,String^ &recstr);
 		int ReleaseContext(); 
 		~card();
-
 		SCARDCONTEXT hContext;
 		array<String^>^ReaderName;
 		Byte ReaderCnt;
